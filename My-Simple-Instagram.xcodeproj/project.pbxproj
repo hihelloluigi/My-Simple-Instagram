@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A17589F1FA780FC0062F7CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A17589E1FA780FC0062F7CD /* AppDelegate.swift */; };
-		2A1758A11FA780FC0062F7CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758A01FA780FC0062F7CD /* ViewController.swift */; };
-		2A1758A41FA780FC0062F7CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1758A21FA780FC0062F7CD /* Main.storyboard */; };
+		2A1758A41FA780FC0062F7CD /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1758A21FA780FC0062F7CD /* Login.storyboard */; };
 		2A1758A61FA780FC0062F7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1758A51FA780FC0062F7CD /* Assets.xcassets */; };
 		2A1758A91FA780FC0062F7CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1758A71FA780FC0062F7CD /* LaunchScreen.storyboard */; };
 		2A1758B41FA780FC0062F7CD /* My_Simple_InstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758B31FA780FC0062F7CD /* My_Simple_InstagramTests.swift */; };
@@ -23,6 +22,9 @@
 		2A1758D11FA79CE50062F7CD /* APIEndpoint+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758D01FA79CE50062F7CD /* APIEndpoint+Tasks.swift */; };
 		2A1758D31FA79D350062F7CD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758D21FA79D350062F7CD /* Reachability.swift */; };
 		2A1758DA1FA79E6B0062F7CD /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758D91FA79E6B0062F7CD /* Database.swift */; };
+		2A1758DC1FA79ED20062F7CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758DB1FA79ED20062F7CD /* LoginViewController.swift */; };
+		2A1758DF1FA7A02C0062F7CD /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758DE1FA7A02C0062F7CD /* AppConfig.swift */; };
+		2A1758E11FA7A2410062F7CD /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A1758E01FA7A2410062F7CD /* Profile.storyboard */; };
 		C7CC6A42276AE269FC703925 /* Pods_My_Simple_InstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E29A78902A1FE91E062F5B1 /* Pods_My_Simple_InstagramTests.framework */; };
 		C8AEE0B29752FEB3902C84AA /* Pods_My_Simple_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441CC03A8726E5EF1D4329F7 /* Pods_My_Simple_Instagram.framework */; };
 /* End PBXBuildFile section */
@@ -42,8 +44,7 @@
 		1E9792085F692BBEBEC956AC /* Pods-My-Simple-InstagramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My-Simple-InstagramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My-Simple-InstagramTests/Pods-My-Simple-InstagramTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2A17589B1FA780FC0062F7CD /* My-Simple-Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-Simple-Instagram.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A17589E1FA780FC0062F7CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A1758A01FA780FC0062F7CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2A1758A31FA780FC0062F7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A1758A31FA780FC0062F7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		2A1758A51FA780FC0062F7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A1758A81FA780FC0062F7CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A1758AA1FA780FC0062F7CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +61,9 @@
 		2A1758D01FA79CE50062F7CD /* APIEndpoint+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoint+Tasks.swift"; sourceTree = "<group>"; };
 		2A1758D21FA79D350062F7CD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		2A1758D91FA79E6B0062F7CD /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		2A1758DB1FA79ED20062F7CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2A1758DE1FA7A02C0062F7CD /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		2A1758E01FA7A2410062F7CD /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		38E86609F38C843957961821 /* Pods-My-Simple-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My-Simple-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-My-Simple-Instagram/Pods-My-Simple-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		441CC03A8726E5EF1D4329F7 /* Pods_My_Simple_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Simple_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F76062ACB33779133FA9B /* Pods-My-Simple-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My-Simple-InstagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My-Simple-InstagramTests/Pods-My-Simple-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,10 +123,11 @@
 			isa = PBXGroup;
 			children = (
 				2A17589E1FA780FC0062F7CD /* AppDelegate.swift */,
-				2A1758A01FA780FC0062F7CD /* ViewController.swift */,
+				2A1758DD1FA7A01A0062F7CD /* Configurations */,
 				2A1758D51FA79E290062F7CD /* Controllers */,
 				2A1758D81FA79E4A0062F7CD /* Database */,
 				2A1758BE1FA79B640062F7CD /* Networking */,
+				2A1758E21FA7A24D0062F7CD /* Extensions */,
 				2A1758BF1FA79B770062F7CD /* Utility */,
 				2A1758D71FA79E360062F7CD /* Storyboard */,
 				2A1758A51FA780FC0062F7CD /* Assets.xcassets */,
@@ -191,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1758D61FA79E300062F7CD /* Login */,
+				2A1758E31FA7A2980062F7CD /* Profile */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 		2A1758D61FA79E300062F7CD /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2A1758DB1FA79ED20062F7CD /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -206,7 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				2A1758A71FA780FC0062F7CD /* LaunchScreen.storyboard */,
-				2A1758A21FA780FC0062F7CD /* Main.storyboard */,
+				2A1758A21FA780FC0062F7CD /* Login.storyboard */,
+				2A1758E01FA7A2410062F7CD /* Profile.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -217,6 +225,28 @@
 				2A1758D91FA79E6B0062F7CD /* Database.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		2A1758DD1FA7A01A0062F7CD /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				2A1758DE1FA7A02C0062F7CD /* AppConfig.swift */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		2A1758E21FA7A24D0062F7CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2A1758E31FA7A2980062F7CD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		733D333955BEDE9DBF9115F7 /* Pods */ = {
@@ -321,7 +351,8 @@
 			files = (
 				2A1758A91FA780FC0062F7CD /* LaunchScreen.storyboard in Resources */,
 				2A1758A61FA780FC0062F7CD /* Assets.xcassets in Resources */,
-				2A1758A41FA780FC0062F7CD /* Main.storyboard in Resources */,
+				2A1758E11FA7A2410062F7CD /* Profile.storyboard in Resources */,
+				2A1758A41FA780FC0062F7CD /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,16 +484,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A1758DC1FA79ED20062F7CD /* LoginViewController.swift in Sources */,
 				2A1758CD1FA79C6E0062F7CD /* APIEndpoint+Paths.swift in Sources */,
 				2A1758CB1FA79C520062F7CD /* APIEndpoint.swift in Sources */,
 				2A1758C61FA79BE60062F7CD /* API+User.swift in Sources */,
-				2A1758A11FA780FC0062F7CD /* ViewController.swift in Sources */,
 				2A1758D11FA79CE50062F7CD /* APIEndpoint+Tasks.swift in Sources */,
 				2A1758C91FA79C290062F7CD /* APIEndpoint+Core.swift in Sources */,
 				2A1758DA1FA79E6B0062F7CD /* Database.swift in Sources */,
 				2A1758CF1FA79C9A0062F7CD /* APIEndpoint+Methods.swift in Sources */,
 				2A1758D31FA79D350062F7CD /* Reachability.swift in Sources */,
 				2A17589F1FA780FC0062F7CD /* AppDelegate.swift in Sources */,
+				2A1758DF1FA7A02C0062F7CD /* AppConfig.swift in Sources */,
 				2A1758C31FA79BAF0062F7CD /* API.swift in Sources */,
 				2A1758C11FA79B920062F7CD /* Typealiases.swift in Sources */,
 			);
@@ -487,12 +519,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2A1758A21FA780FC0062F7CD /* Main.storyboard */ = {
+		2A1758A21FA780FC0062F7CD /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2A1758A31FA780FC0062F7CD /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		2A1758A71FA780FC0062F7CD /* LaunchScreen.storyboard */ = {
