@@ -17,6 +17,9 @@ target 'My-Simple-Instagram' do
   #Images
   pod 'Kingfisher'
 
+  #Utilities
+  pod 'SwiftyJSON'
+  
   target 'My-Simple-InstagramTests' do
     inherit! :search_paths
     # Pods for testing
