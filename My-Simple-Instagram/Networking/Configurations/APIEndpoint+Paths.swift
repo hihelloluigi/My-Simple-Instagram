@@ -11,18 +11,23 @@ import Foundation
 extension APIEndpoint {
     var path: String {
         switch self {
+        
+        //MARK:- Users
         case .getMyInfo():
             return ("users/self")
-        case .getUserInfo(_):
-            return ("/user/signup")
+        case .getUserInfo(let userId):
+            return ("/users/\(userId)")
         case .getMyRecentMedia(_, _, _):
-            return ("/user/signup")
-        case .getUserRecentMedia(_, _, _):
-            return ("/user/signup")
+            return ("/users/self/media/recent")
+        case .getUserRecentMedia(let userId, _, _):
+            return ("/users//\(userId)/media/recent")
         case .getMyLike(_, _):
-            return ("/user/signup")
+            return ("/users/self/media/liked")
         case .searchUser(_, _):
-            return ("/user/signup")
+            return ("/users/search")
+           
+        //Mark:- Others
+            
         }
     }
 }

@@ -24,11 +24,8 @@ extension APIEndpoint: TargetType {
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .getMyInfo(_):
-            return JSONEncoding.default
         default:
             return URLEncoding.queryString
-            
         }
     }
     
