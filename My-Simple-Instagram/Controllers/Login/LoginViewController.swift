@@ -44,9 +44,11 @@ class LoginViewController: UIViewController {
     }
     func handleAuth(authToken: String) {
         print("Token: \(authToken)")
-        API.UserClass.getMyProfile { (success) in
-            print(success)
-        }
+        Config.store(token: authToken)
+        
+        let mainStoryboard = UIStoryboard(name: "Profile", bundle: Bundle.main)
+        let controller: ProfileViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        self.present(controller, animated: true, completion: nil)
     }
 }
 
