@@ -29,6 +29,11 @@
 		2A1758E71FA7A3380062F7CD /* LAButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758E61FA7A3380062F7CD /* LAButton.swift */; };
 		2A1758EA1FA7A4DE0062F7CD /* LABarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758E91FA7A4DE0062F7CD /* LABarButton.swift */; };
 		2A1758EC1FA7A65A0062F7CD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758EB1FA7A65A0062F7CD /* User.swift */; };
+		2A1758EE1FA7A7200062F7CD /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758ED1FA7A7200062F7CD /* ResponseParser.swift */; };
+		2A1758F01FA7A73D0062F7CD /* ResponseParser+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758EF1FA7A73D0062F7CD /* ResponseParser+Users.swift */; };
+		2A1758F21FA7AD300062F7CD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758F11FA7AD300062F7CD /* Config.swift */; };
+		2A681C6F1FA8F84000A9D40E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A681C6E1FA8F84000A9D40E /* Image.swift */; };
+		2A681C711FA8F97D00A9D40E /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A681C701FA8F97D00A9D40E /* Enum.swift */; };
 		C7CC6A42276AE269FC703925 /* Pods_My_Simple_InstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E29A78902A1FE91E062F5B1 /* Pods_My_Simple_InstagramTests.framework */; };
 		C8AEE0B29752FEB3902C84AA /* Pods_My_Simple_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441CC03A8726E5EF1D4329F7 /* Pods_My_Simple_Instagram.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +77,11 @@
 		2A1758E61FA7A3380062F7CD /* LAButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LAButton.swift; sourceTree = "<group>"; };
 		2A1758E91FA7A4DE0062F7CD /* LABarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LABarButton.swift; sourceTree = "<group>"; };
 		2A1758EB1FA7A65A0062F7CD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2A1758ED1FA7A7200062F7CD /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		2A1758EF1FA7A73D0062F7CD /* ResponseParser+Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseParser+Users.swift"; sourceTree = "<group>"; };
+		2A1758F11FA7AD300062F7CD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2A681C6E1FA8F84000A9D40E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		2A681C701FA8F97D00A9D40E /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		38E86609F38C843957961821 /* Pods-My-Simple-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My-Simple-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-My-Simple-Instagram/Pods-My-Simple-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		441CC03A8726E5EF1D4329F7 /* Pods_My_Simple_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Simple_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F76062ACB33779133FA9B /* Pods-My-Simple-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My-Simple-InstagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My-Simple-InstagramTests/Pods-My-Simple-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1758C01FA79B920062F7CD /* Typealiases.swift */,
+				2A681C701FA8F97D00A9D40E /* Enum.swift */,
 				2A1758D21FA79D350062F7CD /* Reachability.swift */,
 			);
 			path = Utility;
@@ -197,6 +208,8 @@
 		2A1758D41FA79D620062F7CD /* Response Parsers */ = {
 			isa = PBXGroup;
 			children = (
+				2A1758ED1FA7A7200062F7CD /* ResponseParser.swift */,
+				2A1758EF1FA7A73D0062F7CD /* ResponseParser+Users.swift */,
 			);
 			path = "Response Parsers";
 			sourceTree = "<group>";
@@ -233,6 +246,7 @@
 			children = (
 				2A1758D91FA79E6B0062F7CD /* Database.swift */,
 				2A1758EB1FA7A65A0062F7CD /* User.swift */,
+				2A681C6E1FA8F84000A9D40E /* Image.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -241,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1758DE1FA7A02C0062F7CD /* AppConfig.swift */,
+				2A1758F11FA7AD300062F7CD /* Config.swift */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -508,10 +523,13 @@
 				2A1758CD1FA79C6E0062F7CD /* APIEndpoint+Paths.swift in Sources */,
 				2A1758CB1FA79C520062F7CD /* APIEndpoint.swift in Sources */,
 				2A1758C61FA79BE60062F7CD /* API+User.swift in Sources */,
+				2A681C711FA8F97D00A9D40E /* Enum.swift in Sources */,
 				2A1758E51FA7A2EE0062F7CD /* ProfileViewController.swift in Sources */,
 				2A1758D11FA79CE50062F7CD /* APIEndpoint+Tasks.swift in Sources */,
 				2A1758E71FA7A3380062F7CD /* LAButton.swift in Sources */,
+				2A681C6F1FA8F84000A9D40E /* Image.swift in Sources */,
 				2A1758EC1FA7A65A0062F7CD /* User.swift in Sources */,
+				2A1758F01FA7A73D0062F7CD /* ResponseParser+Users.swift in Sources */,
 				2A1758C91FA79C290062F7CD /* APIEndpoint+Core.swift in Sources */,
 				2A1758DA1FA79E6B0062F7CD /* Database.swift in Sources */,
 				2A1758CF1FA79C9A0062F7CD /* APIEndpoint+Methods.swift in Sources */,
@@ -520,7 +538,9 @@
 				2A17589F1FA780FC0062F7CD /* AppDelegate.swift in Sources */,
 				2A1758DF1FA7A02C0062F7CD /* AppConfig.swift in Sources */,
 				2A1758C31FA79BAF0062F7CD /* API.swift in Sources */,
+				2A1758F21FA7AD300062F7CD /* Config.swift in Sources */,
 				2A1758C11FA79B920062F7CD /* Typealiases.swift in Sources */,
+				2A1758EE1FA7A7200062F7CD /* ResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
