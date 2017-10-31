@@ -14,7 +14,7 @@ import RealmSwift
  */
 public class Database {
     // MARK: - Constants
-    private static let schemaVersion: UInt64 = 1
+    private static let schemaVersion: UInt64 = 6
     
     // MARK: - Singleton
     /**
