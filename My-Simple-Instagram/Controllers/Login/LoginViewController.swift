@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
         print("Token: \(authToken)")
         Config.store(token: authToken)
         
-        let mainStoryboard = UIStoryboard(name: "Profile", bundle: Bundle.main)
+        let mainStoryboard = UIStoryboard(name: "Gallery", bundle: Bundle.main)
         let controller: NavigationController = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as! NavigationController
         self.present(controller, animated: true, completion: nil)
     }

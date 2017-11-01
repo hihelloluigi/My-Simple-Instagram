@@ -8,165 +8,63 @@
 
 import UIKit
 import Kingfisher
-import Cards
 
 class ProfileViewController: UIViewController {
 
     //MARK:- Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var webSiteButton: UIButton!
+    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var followerButton: UIButton!
+    @IBOutlet weak var followedButton: UIButton!
     
     //MARK:- Variables
-    var images = [Image]()
-    var card: CardHighlight!
-    @IBOutlet weak var second: CardHighlight!
 
     //MARK:- Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionView()
-        myProfileButton()
+        configurationUI()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
-    
-    //MARK:- Setup
-    private func setupCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
     }
-    private func myProfileButton() {
-        
-        let profileButton: LAButton = LAButton(type: .custom)
-        profileButton.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-//        profileButton.isCircle = true
-        profileButton.layer.masksToBounds = true
 
-        profileButton.backgroundColor = .red
-        let barButtonItem = UIBarButtonItem(customView: profileButton)
-        self.navigationItem.setRightBarButton(barButtonItem, animated: true)
-        
-        
-        var stringUrl = ""
-        if let myProfile = User.getMyProfile() {
-            stringUrl = myProfile.profilePicture
+    //MARK:- Setup
+    private func configurationUI() {
+        guard let myUser = User.getMyProfile() else {
+            print("Profile not found")
+            return
         }
-        let imageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 34, height: 34))
-        imageView.layer.masksToBounds = true
-        imageView.kf.setImage(with: URL(string: stringUrl), placeholder: #imageLiteral(resourceName: "ic_account")) { (image, error, cache, url) in
-            if let img = image, error == nil {
-                let newImage = self.resizeImage(image: img, targetSize: CGSize(width: 34, height: 34))
-                profileButton.setImage(newImage, for: .normal)
-                let barButtonItem = UIBarButtonItem(customView: profileButton)
-                self.navigationItem.setRightBarButton(barButtonItem, animated: true)
-            }
-        }
-    }
-    
-    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
-        let size = image.size
+        usernameLabel.text = myUser.username
+        descriptionLabel.text = myUser.bio
+        webSiteButton.setTitle(myUser.website, for: .normal)
+        profileImageView.isCircle()
+        profileImageView.kf.setImage(with: URL(string: myUser.profilePicture), placeholder: #imageLiteral(resourceName: "ic_account"))
         
-        let widthRatio  = targetSize.width  / size.width
-        let heightRatio = targetSize.height / size.height
-        
-        // Figure out what our orientation is, and use that to form the rectangle
-        var newSize: CGSize
-        if(widthRatio > heightRatio) {
-            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
-        } else {
-            newSize = CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
-        }
-        
-        // This is the rect that we've calculated out and this is what is actually used below
-        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
-        
-        // Actually do the resizing to the rect using the ImageContext stuff
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.draw(in: rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return newImage!
+        let customView = CustomButtonView(frame: postButton.frame)
+        customView.valueLabel.text = "10"
+//        customView.set(number: String(myUser.media), description: "post")
+//        postButton.addSubview(customView)
+        followerButton.addSubview(CustomButtonView(frame: followerButton.frame))
+//        followedButton.addSubview(CustomButtonView(frame: followedButton.frame, number: String(myUser.followedBy), description: "seguiti"))
     }
     
     //MARK:- Actions
-    @IBAction func myInfoDidTap(_ sender: Any) {
-        API.UserClass.getMyProfile { (success) in
-            guard success else {
-                print("Errore")
-                return
-            }
-            print("Ok zio")
-        }
+    @IBAction func webSiteDidTap(_ sender: Any) {
+        Utility.link(url: webSiteButton.titleLabel?.text)
     }
-    @IBAction func otherInfoDidTap(_ sender: Any) {
-        API.UserClass.getUserProfile(userId: 10) { (success) in
-            guard success else {
-                print("Errore")
-                return
-            }
-        }
+    @IBAction func postDidTap(_ sender: Any) {
     }
-    @IBAction func myMediaDidTap(_ sender: Any) {
-        //TO DO - Not working correctly return only 20 photos
-        API.UserClass.getMyMedia(maxId: "", minId: "", count: "40") { (success) in
-            guard success else {
-                print("Errore")
-                return
-            }
-            guard let id = Config.id() else {
-                print("No id set")
-                return
-            }
-            self.images = Image.getAllImages(withUserID: id)
-            self.collectionView.reloadData()
-            print("Io ho: \(self.images.count) immagini")
-            
-        }
+    @IBAction func followerDidTap(_ sender: Any) {
+        print("test")
     }
-    @IBAction func otherMediaDidTap(_ sender: Any) {
-    }
-    @IBAction func myLikeDidTap(_ sender: Any) {
-    }
-    @IBAction func searchDidTap(_ sender: Any) {
+    @IBAction func followedDidTap(_ sender: Any) {
     }
 }
 
-//MARK:- Collection view data source
-extension ProfileViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
-    }
-}
 
-//MARK:- Collection view delegate
-extension ProfileViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card cell", for: indexPath) as! CardCollectionCell
-
-        let image = self.images[indexPath.row]
-        cell.set(imageString: image.standardResolution, index: indexPath.row, viewController: self)
-        return cell
-    }
-}
-
-extension ProfileViewController: CardDelegate {
-    func cardDidTapInside(card: Card) {
-        let mainStoryboard = UIStoryboard(name: "Profile", bundle: Bundle.main)
-        let cardContentVC: ImageDetailsViewController = mainStoryboard.instantiateViewController(withIdentifier: "ImageDetailsViewController") as! ImageDetailsViewController
-        cardContentVC.imageId = self.images[card.tag].imageId
-        cardContentVC.image = card.backgroundImage
-        
-        card.shouldPresentVC(cardContentVC, from: self)
-
-//        card.shouldPresent(cardContentVC.view, from: self)
-    }
-    
-    func cardHighlightDidTapButton(card: CardHighlight, button: UIButton) {
-        card.buttonText = "HEY!"
-    }
-}
