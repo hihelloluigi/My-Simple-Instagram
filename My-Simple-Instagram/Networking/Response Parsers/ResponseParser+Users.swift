@@ -6,6 +6,8 @@
 //  Copyright © 2017 Luigi Aiello. All rights reserved.
 //
 
+//Documentations: https://www.instagram.com/developer/endpoints/users/
+
 import Foundation
 import Moya
 import RealmSwift
@@ -14,22 +16,7 @@ import SwiftyJSON
 extension ResponseParser {
     class Users {
         
-//        {
-//            "data": {
-//                "id": "1574083",
-//                "username": "snoopdogg",
-//                "full_name": "Snoop Dogg",
-//                "profile_picture": "http://distillery.s3.amazonaws.com/profiles/profile_1574083_75sq_1295469061.jpg",
-//                "bio": "This is my bio",
-//                "website": "http://snoopdogg.com",
-//                "counts": {
-//                "media": 1320,
-//                "follows": 420,
-//                "followed_by": 3410
-//            }
-//        }
-        
-        class func parseAndStoreUserProfile(json: JSON) -> Bool {
+        class func parseAndStoreUserProfile(json: JSON, isMyUser: Bool = false) -> Bool {
             let data = json["data"]
             
             guard
@@ -45,6 +32,10 @@ extension ResponseParser {
             else {
                 print("User parse error")
                 return false
+            }
+            
+            if isMyUser {
+                Config.store(id: userID)
             }
             
             let user = User(userID: userID,

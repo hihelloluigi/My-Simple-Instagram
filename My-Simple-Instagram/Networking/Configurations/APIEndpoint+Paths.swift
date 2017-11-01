@@ -20,14 +20,31 @@ extension APIEndpoint {
         case .getMyRecentMedia(_, _, _):
             return ("/users/self/media/recent")
         case .getUserRecentMedia(let userId, _, _):
-            return ("/users//\(userId)/media/recent")
+            return ("/users/\(userId)/media/recent")
         case .getMyLike(_, _):
             return ("/users/self/media/liked")
         case .searchUser(_, _):
             return ("/users/search")
            
-        //Mark:- Others
+        // MARK:- Relationships
+        case .getFollows():
+            return ("users/self/follows")
+        case .getFollowedBy():
+            return ("users/self/followed-by")
+        case .getRequestedBy():
+            return ("users/self/requested-by")
+        case .getRelationshipWith(let userId):
+            return ("/users/\(userId)/relationship")
+        case .modifyRelationshipWith(let userId):
+            return ("/users/\(userId)/relationship")
             
+        // MARK:- Media
+        case .getMediaWithId(let mediaId):
+            return ("/media/\(mediaId)")
+        case .getMediaWithShortCode(let shortCodeId):
+            return ("/media/shortcode/\(shortCodeId)")
+        case .getMediaWithArea(_, _, _):
+            return ("/media/search")
         }
     }
 }

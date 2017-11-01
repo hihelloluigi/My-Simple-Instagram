@@ -12,18 +12,40 @@ import Moya
 extension APIEndpoint {
     var task: Task {
         switch self {
+            
+        //MARK:- Users
         case .getMyInfo():
             return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
         case .getUserInfo(_):
             return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
         case .getMyRecentMedia(let maxId, let minId, let number):
-            return .requestParameters(parameters: ["access_token": accessToken, "max_id": maxId, "min_id": minId, "count": number], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["max_id": maxId, "min_id": minId, "count": number, "access_token": accessToken,], encoding: parameterEncoding)
         case .getUserRecentMedia(let maxId, let minId, let number):
-            return .requestParameters(parameters: ["access_token": accessToken, "max_id": maxId, "min_id": minId, "count": number], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["max_id": maxId, "min_id": minId, "count": number, "access_token": accessToken], encoding: parameterEncoding)
         case .getMyLike(let maxId, let number):
-            return .requestParameters(parameters: ["access_token": accessToken, "max_id": maxId, "count": number], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["max_id": maxId, "count": number, "access_token": accessToken], encoding: parameterEncoding)
         case .searchUser(let query, let number):
-            return .requestParameters(parameters: ["access_token": accessToken, "q": query, "count": number], encoding: parameterEncoding)
+            return .requestParameters(parameters: ["q": query, "count": number, "access_token": accessToken], encoding: parameterEncoding)
+            
+        //MARK:- Relationships
+        case .getFollows():
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
+        case .getFollowedBy(_):
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
+        case .getRequestedBy():
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
+        case .getRelationshipWith(_):
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
+        case .modifyRelationshipWith(_):
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
+        
+        // MARK:- Media
+        case .getMediaWithId(_):
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
+        case .getMediaWithShortCode(_):
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
+        case .getMediaWithArea(let latitude, let longitude, let distance):
+            return .requestParameters(parameters: ["lat": latitude, "lng": longitude, "distance": distance, "access_token": accessToken], encoding: parameterEncoding)
         }
     }
     

@@ -22,13 +22,11 @@ extension API {
                 switch result {
                 case let .success(response):
                     let json = JSON(data: response.data)
-                    //TO DO - Improve
-                    guard json["meta"]["code"] == 200, let myID = json["data"]["id"].string else {
+                    guard json["meta"]["code"] == 200 else {
                         completionHandler?(false)
                         return
                     }
-                    Config.store(id: myID)
-                    let result = ResponseParser.Users.parseAndStoreUserProfile(json: json)
+                    let result = ResponseParser.Users.parseAndStoreUserProfile(json: json, isMyUser: true)
                     completionHandler?(result)
                 case .failure(_):
                     completionHandler?(false)
@@ -45,8 +43,6 @@ extension API {
                         completionHandler?(false)
                         return
                     }
-                    
-                    print(json)
                     completionHandler?(true)
                 case .failure(_):
                     completionHandler?(false)
@@ -63,7 +59,6 @@ extension API {
                         completionHandler?(false)
                         return
                     }
-//                    print(json)
                     let result = ResponseParser.Users.parseAndStoreGallery(json: json)
                     completionHandler?(result)
                 case .failure(_):
@@ -71,8 +66,5 @@ extension API {
                 }
             }
         }
-
-        
-        
     }
 }
