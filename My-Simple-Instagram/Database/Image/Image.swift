@@ -16,7 +16,7 @@ class Image: Object {
     @objc dynamic var userId = ""
     @objc dynamic var instaLink: String = ""
     @objc dynamic var creationTime: Date?
-    @objc dynamic var commentNumber: Int = 0
+    @objc dynamic var commentsNumber: Int = 0
     @objc dynamic var likesNumber: Int = 0
     @objc dynamic var userHasLike: Bool = false
     @objc dynamic var attribution: String?
@@ -37,7 +37,7 @@ class Image: Object {
                      userId: String,
                      instaLink: String,
                      creationTime: Date?,
-                     commentNumber cn: Int,
+                     commentsNumber cn: Int,
                      likesNumber ln: Int,
                      userHasLike: Bool,
                      attribution: String?,
@@ -50,7 +50,7 @@ class Image: Object {
         self.userId = userId
         self.instaLink = instaLink
         self.creationTime = creationTime
-        self.commentNumber = cn
+        self.commentsNumber = cn
         self.likesNumber = ln
         self.userHasLike = userHasLike
         self.attribution = attribution
@@ -58,6 +58,11 @@ class Image: Object {
         self.standardResolution = standardResolution
         self.thumbnailResolution = thumbnailResolution
 
+    }
+    
+    class func getImage(withId id: String) -> Image? {
+        let predicate = NSPredicate(format: "imageId == %@", id)
+        return Database.shared.query(entitiesOfType: Image.self, where: predicate)?.first
     }
     
     class func getAllImages(withUserID id: String) -> [Image] {

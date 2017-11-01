@@ -50,7 +50,14 @@ class User: Object {
     }
     
     class func get(withID id: String) -> User? {
-        return Database.shared.query(entitiesOfType: User.self, where: NSPredicate(format: "remoteID == %@", id))?.first
+        return Database.shared.query(entitiesOfType: User.self, where: NSPredicate(format: "userID == %@", id))?.first
+    }
+    
+    class func getMyProfile() -> User? {
+        guard let id = Config.id() else {
+            return nil
+        }
+        return Database.shared.query(entitiesOfType: User.self, where: NSPredicate(format: "userID == %@", id))?.first
     }
 }
 
