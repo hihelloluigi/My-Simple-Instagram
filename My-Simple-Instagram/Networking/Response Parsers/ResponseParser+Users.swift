@@ -78,7 +78,7 @@ extension ResponseParser {
                                   userId: userId,
                                   instaLink: instaLink,
                                   creationTime: Date(),
-                                  commentNumber: commentsNumber,
+                                  commentsNumber: commentsNumber,
                                   likesNumber: likesNumber,
                                   userHasLike: userHasLike,
                                   attribution: image["attribution"].string,

@@ -4,16 +4,128 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile-->
+        <!--Profilo-->
         <scene sceneID="ywh-OJ-0z6">
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" id="xWT-1D-nBo" customClass="ProfileViewController" customModule="My_Simple_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lfw-YA-fIo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-sb-Lbj">
+                                <rect key="frame" x="137.5" y="96" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5tg-Oe-9UM"/>
+                                    <constraint firstAttribute="height" constant="100" id="LP6-ip-Cof"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="S0D-wM-oDG">
+                                <rect key="frame" x="16" y="228" width="343" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Username#" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jah-Gp-KzC">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Descrizione#" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxT-yz-JEG">
+                                        <rect key="frame" x="0.0" y="28.5" width="343" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6P-J3-kg1">
+                                        <rect key="frame" x="0.0" y="57" width="343" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="#Sito#">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="webSiteDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="fZd-Ij-sFb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="r4g-I2-Umx">
+                                <rect key="frame" x="65.5" y="350" width="244" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69k-9v-VgN">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="0T2-N8-b00"/>
+                                            <constraint firstAttribute="height" constant="60" id="dQR-Zm-Wrn"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="postDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="MrP-LK-zD6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QO-5h-cyr">
+                                        <rect key="frame" x="92" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="g9f-ni-Nn5"/>
+                                            <constraint firstAttribute="width" constant="60" id="zhC-X8-3aH"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="followerDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="dqC-BZ-4j8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pw3-pn-KHv">
+                                        <rect key="frame" x="184" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="AFr-qu-uFa"/>
+                                            <constraint firstAttribute="height" constant="60" id="IxM-RM-eg4"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="followedDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="yUR-8d-hTM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r4g-I2-Umx" firstAttribute="top" secondItem="S0D-wM-oDG" secondAttribute="bottom" constant="32" id="25A-Ek-GlQ"/>
+                            <constraint firstItem="v9Y-sb-Lbj" firstAttribute="centerX" secondItem="Lfw-YA-fIo" secondAttribute="centerX" id="7NC-Vt-1t0"/>
+                            <constraint firstItem="Vip-OF-pMx" firstAttribute="trailing" secondItem="S0D-wM-oDG" secondAttribute="trailing" constant="16" id="996-2W-QNn"/>
+                            <constraint firstItem="S0D-wM-oDG" firstAttribute="top" secondItem="v9Y-sb-Lbj" secondAttribute="bottom" constant="32" id="AN7-q5-WdQ"/>
+                            <constraint firstItem="r4g-I2-Umx" firstAttribute="centerX" secondItem="S0D-wM-oDG" secondAttribute="centerX" id="KLU-yR-dlU"/>
+                            <constraint firstItem="v9Y-sb-Lbj" firstAttribute="top" secondItem="Vip-OF-pMx" secondAttribute="top" constant="32" id="e1U-Ja-leG"/>
+                            <constraint firstItem="S0D-wM-oDG" firstAttribute="leading" secondItem="Vip-OF-pMx" secondAttribute="leading" constant="16" id="fnC-td-b5o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vip-OF-pMx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profilo" id="bLL-LZ-03d"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="oxT-yz-JEG" id="56t-QD-hTY"/>
+                        <outlet property="followedButton" destination="pw3-pn-KHv" id="Ad7-Wd-T2P"/>
+                        <outlet property="followerButton" destination="2QO-5h-cyr" id="AW1-J7-A2A"/>
+                        <outlet property="postButton" destination="69k-9v-VgN" id="d5X-P6-Ic7"/>
+                        <outlet property="profileImageView" destination="v9Y-sb-Lbj" id="2On-qo-qqB"/>
+                        <outlet property="usernameLabel" destination="Jah-Gp-KzC" id="lca-ag-HLi"/>
+                        <outlet property="webSiteButton" destination="C6P-J3-kg1" id="FaX-rc-8rQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bna-dj-boS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1431.2" y="1144.6776611694154"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="gXH-fj-2Lw">
+            <objects>
+                <viewController id="IfQ-nZ-d5X" customClass="APITestViewController" customModule="My_Simple_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xf6-2k-4oe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -24,42 +136,42 @@
                                         <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
                                         <state key="normal" title="My user info"/>
                                         <connections>
-                                            <action selector="myInfoDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="qML-K6-9Im"/>
+                                            <action selector="myInfoDidTap:" destination="IfQ-nZ-d5X" eventType="touchUpInside" id="pzN-ie-fvs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq1-xY-fgI">
                                         <rect key="frame" x="0.0" y="38" width="103" height="30"/>
                                         <state key="normal" title="Other user info"/>
                                         <connections>
-                                            <action selector="otherInfoDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="x7T-ZN-xJn"/>
+                                            <action selector="otherInfoDidTap:" destination="IfQ-nZ-d5X" eventType="touchUpInside" id="zOQ-FO-kFp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moP-c6-g3Q">
                                         <rect key="frame" x="0.0" y="76" width="115" height="30"/>
                                         <state key="normal" title="My recent media"/>
                                         <connections>
-                                            <action selector="myMediaDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="RlG-vf-vuZ"/>
+                                            <action selector="myMediaDidTap:" destination="IfQ-nZ-d5X" eventType="touchUpInside" id="5LB-UD-LPo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbW-Yq-TeH">
                                         <rect key="frame" x="0.0" y="114" width="167" height="30"/>
                                         <state key="normal" title="Other user recent media"/>
                                         <connections>
-                                            <action selector="otherMediaDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="8Op-VT-fJU"/>
+                                            <action selector="otherMediaDidTap:" destination="IfQ-nZ-d5X" eventType="touchUpInside" id="oaO-Y4-YoJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d8V-qW-APO">
                                         <rect key="frame" x="0.0" y="152" width="94" height="30"/>
                                         <state key="normal" title="My like media"/>
                                         <connections>
-                                            <action selector="myLikeDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="mY2-ZL-lbu"/>
+                                            <action selector="myLikeDidTap:" destination="IfQ-nZ-d5X" eventType="touchUpInside" id="SYt-0I-nLN"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCz-X0-crd">
                                         <rect key="frame" x="0.0" y="190" width="48" height="30"/>
                                         <state key="normal" title="Search"/>
                                         <connections>
-                                            <action selector="searchDidTap:" destination="xWT-1D-nBo" eventType="touchUpInside" id="UoK-ii-zsM"/>
+                                            <action selector="searchDidTap:" destination="IfQ-nZ-d5X" eventType="touchUpInside" id="9Zj-E7-khe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -67,31 +179,30 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LJh-Bx-9b1" firstAttribute="centerY" secondItem="Lfw-YA-fIo" secondAttribute="centerY" id="15y-J2-0Or"/>
-                            <constraint firstItem="LJh-Bx-9b1" firstAttribute="centerX" secondItem="Lfw-YA-fIo" secondAttribute="centerX" id="ihC-bz-k36"/>
+                            <constraint firstItem="LJh-Bx-9b1" firstAttribute="centerY" secondItem="xf6-2k-4oe" secondAttribute="centerY" id="0zc-KE-aJO"/>
+                            <constraint firstItem="LJh-Bx-9b1" firstAttribute="centerX" secondItem="xf6-2k-4oe" secondAttribute="centerX" id="dXc-xe-ukW"/>
+                            <constraint firstItem="LJh-Bx-9b1" firstAttribute="centerX" secondItem="xf6-2k-4oe" secondAttribute="centerX" id="hV8-Ut-Z6U"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Vip-OF-pMx"/>
+                        <viewLayoutGuide key="safeArea" id="Nsa-Vz-cDQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="bLL-LZ-03d">
-                        <barButtonItem key="rightBarButtonItem" image="ic_account" id="VBx-3h-XCe" customClass="LABarButton" customModule="My_Simple_Instagram" customModuleProvider="target">
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
-                            </userDefinedRuntimeAttributes>
-                        </barButtonItem>
-                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bna-dj-boS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ria-cw-2hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1431.2" y="1144.6776611694154"/>
+            <point key="canvasLocation" x="12" y="1145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qer-km-zJb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="piq-o9-Tb7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="piq-o9-Tb7" customClass="NavigationController" customModule="My_Simple_Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="APW-bV-CWv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.086274509803921567" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -103,7 +214,4 @@
             <point key="canvasLocation" x="-2126" y="1145"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="ic_account" width="27" height="27"/>
-    </resources>
 </document>
