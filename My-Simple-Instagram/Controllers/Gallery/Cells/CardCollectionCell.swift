@@ -38,6 +38,8 @@ class CardCollectionCell: UICollectionViewCell {
                     let card = CardHighlight(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height))
                     card.delegate = controller as? CardDelegate
                     card.backgroundImage = image
+                    card.cardRadius = 10
+                    card.shadowBlur = 5
                     card.title = ""
                     card.itemTitle = ""
                     card.itemSubtitle = ""
