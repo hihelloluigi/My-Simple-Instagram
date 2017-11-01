@@ -19,6 +19,9 @@ target 'My-Simple-Instagram' do
 
   #Utilities
   pod 'SwiftyJSON'
+
+  #Graphics
+  pod 'Cards'
   
   target 'My-Simple-InstagramTests' do
     inherit! :search_paths
