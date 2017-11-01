@@ -36,7 +36,7 @@ class CardCollectionCell: UICollectionViewCell {
                 if error == nil {
                     // Aspect Ratio of 5:6 is preferred
                     let card = CardHighlight(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height))
-                    card.delegate = controller as! CardDelegate
+                    card.delegate = controller as? CardDelegate
                     card.backgroundImage = image
                     card.title = ""
                     card.itemTitle = ""
