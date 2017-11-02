@@ -117,7 +117,7 @@ extension GalleryViewController: UICollectionViewDelegate {
 
 extension GalleryViewController: CardDelegate {
     func cardDidTapInside(card: Card) {
-        let mainStoryboard = UIStoryboard(name: "Profile", bundle: Bundle.main)
+        let mainStoryboard = UIStoryboard(name: "Gallery", bundle: Bundle.main)
         let cardContentVC: ImageDetailsViewController = mainStoryboard.instantiateViewController(withIdentifier: "ImageDetailsViewController") as! ImageDetailsViewController
         cardContentVC.imageId = self.images[card.tag].imageId
         cardContentVC.image = card.backgroundImage

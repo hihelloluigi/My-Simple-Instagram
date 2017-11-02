@@ -46,11 +46,10 @@ class ProfileViewController: UIViewController {
         profileImageView.isCircle()
         profileImageView.kf.setImage(with: URL(string: myUser.profilePicture), placeholder: #imageLiteral(resourceName: "ic_account"))
         
-        let customView = CustomButtonView(frame: postButton.frame)
-        customView.valueLabel.text = "10"
+
 //        customView.set(number: String(myUser.media), description: "post")
 //        postButton.addSubview(customView)
-        followerButton.addSubview(CustomButtonView(frame: followerButton.frame))
+//        followerButton.addSubview(CustomButtonView(frame: followerButton.frame))
 //        followedButton.addSubview(CustomButtonView(frame: followedButton.frame, number: String(myUser.followedBy), description: "seguiti"))
     }
     
