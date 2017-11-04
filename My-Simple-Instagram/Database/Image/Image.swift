@@ -23,6 +23,8 @@ class Image: Object {
     @objc dynamic var highResolution: String = ""
     @objc dynamic var standardResolution: String = ""
     @objc dynamic var thumbnailResolution: String = ""
+    @objc dynamic var locationName: String = ""
+    @objc dynamic var coordinate: String = ""
 
     var tags = List<String>()
     var filters = List<String>()
@@ -43,7 +45,8 @@ class Image: Object {
                      attribution: String?,
                      highResolution: String,
                      standardResolution: String,
-                     thumbnailResolution: String) {
+                     thumbnailResolution: String,
+                     locationName: String?) {
         self.init()
         
         self.imageId = imageId
@@ -53,11 +56,11 @@ class Image: Object {
         self.commentsNumber = cn
         self.likesNumber = ln
         self.userHasLike = userHasLike
-        self.attribution = attribution
+        self.attribution = attribution ?? ""
         self.highResolution = highResolution
         self.standardResolution = standardResolution
         self.thumbnailResolution = thumbnailResolution
-
+        self.locationName = locationName ?? ""
     }
     
     class func getImage(withId id: String) -> Image? {
