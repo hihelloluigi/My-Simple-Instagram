@@ -38,9 +38,15 @@
 		2A53547E1FAA89B800856690 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53547D1FAA89B800856690 /* CustomButtonView.swift */; };
 		2A681C6F1FA8F84000A9D40E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A681C6E1FA8F84000A9D40E /* Image.swift */; };
 		2A681C711FA8F97D00A9D40E /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A681C701FA8F97D00A9D40E /* Enum.swift */; };
+		2A6FE57A1FAB9A3900BCF9D6 /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FE5791FAB9A3900BCF9D6 /* CustomCard.swift */; };
+		2A7DD6211FADCD020085054F /* API+Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DD6201FADCD020085054F /* API+Comment.swift */; };
+		2A7DD6231FADCF0E0085054F /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7DD6221FADCF0E0085054F /* AR.storyboard */; };
+		2A7DD6261FADCF470085054F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DD6251FADCF470085054F /* ARViewController.swift */; };
+		2A7DD6281FADD5360085054F /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DD6271FADD5360085054F /* CommentCell.swift */; };
+		2A7DD62B1FADD77F0085054F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DD62A1FADD77F0085054F /* Comment.swift */; };
+		2A7DD62D1FADD87B0085054F /* ReponserParser+Comments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DD62C1FADD87B0085054F /* ReponserParser+Comments.swift */; };
 		2AC5D7871FAA4CBC00F057BE /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5D7861FAA4CBC00F057BE /* GalleryViewController.swift */; };
 		2AC5D7891FAA782E00F057BE /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AC5D7881FAA782E00F057BE /* Gallery.storyboard */; };
-		2AF779381FA9D21400865CC9 /* ImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF779371FA9D21400865CC9 /* ImageCollectionCell.swift */; };
 		2AF7793A1FA9D54700865CC9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF779391FA9D54700865CC9 /* NavigationController.swift */; };
 		2AF7796A1FAA154100865CC9 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF779691FAA154100865CC9 /* CardCollectionCell.swift */; };
 		2AF7796C1FAA306600865CC9 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7796B1FAA306600865CC9 /* ImageDetailsViewController.swift */; };
@@ -97,9 +103,15 @@
 		2A53547D1FAA89B800856690 /* CustomButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		2A681C6E1FA8F84000A9D40E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2A681C701FA8F97D00A9D40E /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		2A6FE5791FAB9A3900BCF9D6 /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
+		2A7DD6201FADCD020085054F /* API+Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Comment.swift"; sourceTree = "<group>"; };
+		2A7DD6221FADCF0E0085054F /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
+		2A7DD6251FADCF470085054F /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		2A7DD6271FADD5360085054F /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		2A7DD62A1FADD77F0085054F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		2A7DD62C1FADD87B0085054F /* ReponserParser+Comments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReponserParser+Comments.swift"; sourceTree = "<group>"; };
 		2AC5D7861FAA4CBC00F057BE /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		2AC5D7881FAA782E00F057BE /* Gallery.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Gallery.storyboard; sourceTree = "<group>"; };
-		2AF779371FA9D21400865CC9 /* ImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionCell.swift; sourceTree = "<group>"; };
 		2AF779391FA9D54700865CC9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		2AF779691FAA154100865CC9 /* CardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
 		2AF7796B1FAA306600865CC9 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
@@ -164,9 +176,9 @@
 			children = (
 				2A17589E1FA780FC0062F7CD /* AppDelegate.swift */,
 				2A1758DD1FA7A01A0062F7CD /* Configurations */,
-				2A1758D51FA79E290062F7CD /* Controllers */,
 				2A1758D81FA79E4A0062F7CD /* Database */,
 				2A1758BE1FA79B640062F7CD /* Networking */,
+				2A1758D51FA79E290062F7CD /* Controllers */,
 				2A1758E81FA7A3430062F7CD /* Custom componets */,
 				2A1758E21FA7A24D0062F7CD /* Extensions */,
 				2A1758BF1FA79B770062F7CD /* Utility */,
@@ -214,6 +226,7 @@
 			children = (
 				2A1758C21FA79BAF0062F7CD /* API.swift */,
 				2A1758C51FA79BE60062F7CD /* API+User.swift */,
+				2A7DD6201FADCD020085054F /* API+Comment.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 			children = (
 				2A1758ED1FA7A7200062F7CD /* ResponseParser.swift */,
 				2A1758EF1FA7A73D0062F7CD /* ResponseParser+Users.swift */,
+				2A7DD62C1FADD87B0085054F /* ReponserParser+Comments.swift */,
 			);
 			path = "Response Parsers";
 			sourceTree = "<group>";
@@ -244,6 +258,8 @@
 			children = (
 				2A1758D61FA79E300062F7CD /* Login */,
 				2AC5D7851FAA4C9200F057BE /* Gallery */,
+				2A7DD62E1FAE40970085054F /* Image Details */,
+				2A7DD6241FADCF300085054F /* AR */,
 				2A1758E31FA7A2980062F7CD /* Profile */,
 			);
 			path = Controllers;
@@ -264,6 +280,7 @@
 				2A1758A21FA780FC0062F7CD /* Login.storyboard */,
 				2AC5D7881FAA782E00F057BE /* Gallery.storyboard */,
 				2A1758E01FA7A2410062F7CD /* Profile.storyboard */,
+				2A7DD6221FADCF0E0085054F /* AR.storyboard */,
 				2A53547B1FAA89B100856690 /* CustomButton.xib */,
 			);
 			path = Storyboard;
@@ -275,6 +292,7 @@
 				2A1758D91FA79E6B0062F7CD /* Database.swift */,
 				2AF7796E1FAA325A00865CC9 /* Image */,
 				2AF7796D1FAA325300865CC9 /* User */,
+				2A7DD6291FADD7770085054F /* Comment */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -310,15 +328,48 @@
 			children = (
 				2A1758E61FA7A3380062F7CD /* LAButton.swift */,
 				2A1758E91FA7A4DE0062F7CD /* LABarButton.swift */,
+				2A6FE5791FAB9A3900BCF9D6 /* CustomCard.swift */,
 			);
 			path = "Custom componets";
+			sourceTree = "<group>";
+		};
+		2A7DD6241FADCF300085054F /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				2A7DD6251FADCF470085054F /* ARViewController.swift */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		2A7DD6291FADD7770085054F /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				2A7DD62A1FADD77F0085054F /* Comment.swift */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		2A7DD62E1FAE40970085054F /* Image Details */ = {
+			isa = PBXGroup;
+			children = (
+				2AF7796B1FAA306600865CC9 /* ImageDetailsViewController.swift */,
+				2A7DD62F1FAE40AA0085054F /* Cells */,
+			);
+			path = "Image Details";
+			sourceTree = "<group>";
+		};
+		2A7DD62F1FAE40AA0085054F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2A7DD6271FADD5360085054F /* CommentCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		2AC5D7851FAA4C9200F057BE /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
 				2AC5D7861FAA4CBC00F057BE /* GalleryViewController.swift */,
-				2AF7796B1FAA306600865CC9 /* ImageDetailsViewController.swift */,
 				2AF779361FA9D1E400865CC9 /* Cells */,
 			);
 			path = Gallery;
@@ -327,7 +378,6 @@
 		2AF779361FA9D1E400865CC9 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2AF779371FA9D21400865CC9 /* ImageCollectionCell.swift */,
 				2AF779691FAA154100865CC9 /* CardCollectionCell.swift */,
 			);
 			path = Cells;
@@ -452,6 +502,7 @@
 				2A1758A91FA780FC0062F7CD /* LaunchScreen.storyboard in Resources */,
 				2AC5D7891FAA782E00F057BE /* Gallery.storyboard in Resources */,
 				2A1758A61FA780FC0062F7CD /* Assets.xcassets in Resources */,
+				2A7DD6231FADCF0E0085054F /* AR.storyboard in Resources */,
 				2A1758E11FA7A2410062F7CD /* Profile.storyboard in Resources */,
 				2A53547C1FAA89B100856690 /* CustomButton.xib in Resources */,
 				2A1758A41FA780FC0062F7CD /* Login.storyboard in Resources */,
@@ -590,27 +641,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6FE57A1FAB9A3900BCF9D6 /* CustomCard.swift in Sources */,
+				2A7DD6211FADCD020085054F /* API+Comment.swift in Sources */,
 				2AF7796C1FAA306600865CC9 /* ImageDetailsViewController.swift in Sources */,
 				2AC5D7871FAA4CBC00F057BE /* GalleryViewController.swift in Sources */,
 				2A1758DC1FA79ED20062F7CD /* LoginViewController.swift in Sources */,
 				2AF7793A1FA9D54700865CC9 /* NavigationController.swift in Sources */,
 				2A1758CD1FA79C6E0062F7CD /* APIEndpoint+Paths.swift in Sources */,
 				2A1758CB1FA79C520062F7CD /* APIEndpoint.swift in Sources */,
-				2AF779381FA9D21400865CC9 /* ImageCollectionCell.swift in Sources */,
 				2A53547E1FAA89B800856690 /* CustomButtonView.swift in Sources */,
 				2A1758C61FA79BE60062F7CD /* API+User.swift in Sources */,
 				2A5354721FAA7CE800856690 /* Utility.swift in Sources */,
 				2A681C711FA8F97D00A9D40E /* Enum.swift in Sources */,
+				2A7DD6261FADCF470085054F /* ARViewController.swift in Sources */,
 				2A1758E51FA7A2EE0062F7CD /* ProfileViewController.swift in Sources */,
 				2AF7796A1FAA154100865CC9 /* CardCollectionCell.swift in Sources */,
 				2A1758D11FA79CE50062F7CD /* APIEndpoint+Tasks.swift in Sources */,
 				2A1758E71FA7A3380062F7CD /* LAButton.swift in Sources */,
 				2A681C6F1FA8F84000A9D40E /* Image.swift in Sources */,
 				2A1758EC1FA7A65A0062F7CD /* User.swift in Sources */,
+				2A7DD6281FADD5360085054F /* CommentCell.swift in Sources */,
 				2A5354761FAA81F600856690 /* UIImageView+XT.swift in Sources */,
 				2A1758F01FA7A73D0062F7CD /* ResponseParser+Users.swift in Sources */,
 				2AF779701FAA3F0200865CC9 /* APITestViewController.swift in Sources */,
 				2A1758C91FA79C290062F7CD /* APIEndpoint+Core.swift in Sources */,
+				2A7DD62D1FADD87B0085054F /* ReponserParser+Comments.swift in Sources */,
+				2A7DD62B1FADD77F0085054F /* Comment.swift in Sources */,
 				2A1758DA1FA79E6B0062F7CD /* Database.swift in Sources */,
 				2A1758CF1FA79C9A0062F7CD /* APIEndpoint+Methods.swift in Sources */,
 				2A1758EA1FA7A4DE0062F7CD /* LABarButton.swift in Sources */,

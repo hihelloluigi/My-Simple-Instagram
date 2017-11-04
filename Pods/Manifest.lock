@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
-  - Cards (1.2.5):
+  - Cards (1.2.7):
     - Player
   - Kingfisher (4.2.0)
   - Moya (10.0.0):
@@ -26,7 +26,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  Cards: 6328922597409e09b782e64c8238a0ee66ce670c
+  Cards: 632d193aeb0192c64dde3c197e1a44f9381e0f17
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   Moya: adb58b0f4e58430db43cc6e2f6ebab1836501186
   Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
