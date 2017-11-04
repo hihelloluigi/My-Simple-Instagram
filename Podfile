@@ -22,6 +22,7 @@ target 'My-Simple-Instagram' do
 
   #Graphics
   pod 'Cards'
+  pod 'Agrume'
   
   target 'My-Simple-InstagramTests' do
     inherit! :search_paths
