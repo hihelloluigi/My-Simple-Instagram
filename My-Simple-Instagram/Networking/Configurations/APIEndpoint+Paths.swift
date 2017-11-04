@@ -45,6 +45,10 @@ extension APIEndpoint {
             return ("/media/shortcode/\(shortCodeId)")
         case .getMediaWithArea(_, _, _):
             return ("/media/search")
+            
+        //MARK:- Comments
+        case .getCommentsWith(let mediaId):
+            return ("/media/\(mediaId)/comments")
         }
     }
 }

@@ -46,6 +46,10 @@ extension APIEndpoint {
             return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
         case .getMediaWithArea(let latitude, let longitude, let distance):
             return .requestParameters(parameters: ["lat": latitude, "lng": longitude, "distance": distance, "access_token": accessToken], encoding: parameterEncoding)
+            
+        // MARK:- Comments
+        case .getCommentsWith(_):
+            return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
         }
     }
     

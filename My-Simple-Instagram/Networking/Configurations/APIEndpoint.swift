@@ -32,4 +32,7 @@ enum APIEndpoint {
     case getMediaWithId(id: String)
     case getMediaWithShortCode(shortCode: String)
     case getMediaWithArea(latitude: String, longitude: String, distance: String)
+    
+    // MARK:- Comments
+    case getCommentsWith(mediaId: String)
 }

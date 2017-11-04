@@ -73,7 +73,6 @@ extension ResponseParser {
                     print("Image parse error")
                     return false
                 }
-                
                 let imageEntity = Image(imageId: imageId,
                                   userId: userId,
                                   instaLink: instaLink,
@@ -84,7 +83,8 @@ extension ResponseParser {
                                   attribution: image["attribution"].string,
                                   highResolution: highResolution,
                                   standardResolution: standardResolution,
-                                  thumbnailResolution: thumbnailResolution)
+                                  thumbnailResolution: thumbnailResolution,
+                                  locationName: image["location"]["name"].string)
                 
                 let _ = imageEntity.store(update: true)
             }
