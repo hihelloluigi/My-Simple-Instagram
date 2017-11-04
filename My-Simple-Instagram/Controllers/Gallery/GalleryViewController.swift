@@ -14,6 +14,7 @@ class GalleryViewController: UIViewController {
     
     //MARK:- Outlets
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var refreshImageButton: UIBarButtonItem!
     
     //MARK:- Variables
     var images = [Image]()
@@ -24,7 +25,7 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupCollectionView()
-        myProfileButton()
+        downloadProfile()
         downloadRecentMedia()
     }
     override func didReceiveMemoryWarning() {
@@ -66,30 +67,48 @@ class GalleryViewController: UIViewController {
             if let img = image, error == nil {
                 profileButton.setImage(img, for: .normal)
                 let barButtonItem = UIBarButtonItem(customView: profileButton)
-                self.navigationItem.setRightBarButton(barButtonItem, animated: true)
+                self.navigationItem.setLeftBarButton(barButtonItem, animated: true)
             }
         }
     }
     
+    //MARK:- Helpers
     @objc private func openMyProfile() {
         let mainStoryboard = UIStoryboard(name: "Profile", bundle: Bundle.main)
         let controller: ProfileViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-    //MARK:- Helpers
-    private func downloadRecentMedia(maxId: String = "", minId: String = "", count: String = "") {
-        API.UserClass.getMyMedia(maxId: maxId, minId: minId, count: count) { (success) in
+    //MARK:- APIs
+    private func downloadProfile() {
+        API.UserClass.getMyProfile { (success) in
             guard success else {
-                print("Errore")
+                print("Sorry I have no profile")
                 return
             }
-            guard let id = Config.id() else {
-                print("No id set")
+            //Add my profile bar button
+            self.myProfileButton()
+        }
+    }
+    private func downloadRecentMedia(maxId: String = "", minId: String = "", count: String = "") {
+        //ADD activity indicator
+        API.UserClass.getMyMedia(maxId: maxId, minId: minId, count: count) { (success) in
+            guard let id = Config.id(), success else {
+                print("Errore")
                 return
             }
             self.images = Image.getAllImages(withUserID: id)
             self.collectionView.reloadData()
+        }
+    }
+    
+    //MARK:- Actions
+    @IBAction func RefreshDidTap(_ sender: Any) {
+        downloadRecentMedia()
+        if self.images.count > 0 {
+            self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0),
+                                              at: .top,
+                                              animated: true)
         }
     }
 }
@@ -110,7 +129,7 @@ extension GalleryViewController: UICollectionViewDelegate {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "card cell", for: indexPath) as! CardCollectionCell
         
         let image = self.images[indexPath.row]
-        cell.set(imageString: image.standardResolution, index: indexPath.row, viewController: self)
+        cell.set(imageString: image.standardResolution, locationString: image.locationName, index: indexPath.row, viewController: self)
         return cell
     }
 }
@@ -122,7 +141,7 @@ extension GalleryViewController: CardDelegate {
         cardContentVC.imageId = self.images[card.tag].imageId
         cardContentVC.image = card.backgroundImage
         
-        card.shouldPresent(cardContentVC.view, from: self)
+        card.shouldPresent(cardContentVC, from: self)
     }
     
     func cardHighlightDidTapButton(card: CardHighlight, button: UIButton) {

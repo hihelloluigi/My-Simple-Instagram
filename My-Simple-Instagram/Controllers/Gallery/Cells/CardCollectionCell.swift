@@ -28,21 +28,20 @@ class CardCollectionCell: UICollectionViewCell {
     }
     
     // MARK: - Methods
-    func set(imageString: String? = "", index: Int, viewController controller: UIViewController) {
+    func set(imageString: String? = "", locationString: String = "", index: Int, viewController controller: UIViewController) {
     
         let imageView: UIImageView = UIImageView(frame: self.view.frame)
         if let img = imageString, let imageUrl = URL(string: img) {
             imageView.kf.setImage(with: imageUrl, placeholder: nil, completionHandler: { (image, error, cache, url) in
                 if error == nil {
-                    // Aspect Ratio of 5:6 is preferred
-                    let card = CardHighlight(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height))
+                    let card = CustomCard(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height))
                     card.delegate = controller as? CardDelegate
                     card.backgroundImage = image
                     card.cardRadius = 10
                     card.shadowBlur = 5
                     card.title = ""
-                    card.itemTitle = ""
-                    card.itemSubtitle = ""
+                    card.category = ""
+                    card.subtitle = ""
                     card.tag = index
                     card.hasParallax = true
                     self.view.addSubview(card)
