@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Agrume
 
 class ImageDetailsViewController: UIViewController {
 
@@ -79,17 +80,9 @@ class ImageDetailsViewController: UIViewController {
     
     //MARK:- Actions
     @IBAction func fullScreenDidTap(_ sender: Any) {
-        let imageView = UIImageView(image: image)
-        imageView.frame = UIScreen.main.bounds
-        imageView.backgroundColor = .black
-        imageView.contentMode = .scaleAspectFit
-        imageView.isUserInteractionEnabled = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
-        imageView.addGestureRecognizer(tap)
-        let window = UIApplication.shared.keyWindow!
-        window.addSubview(imageView)
-        self.navigationController?.isNavigationBarHidden = true
-        self.tabBarController?.tabBar.isHidden = true
+        let agrume = Agrume(image: self.image, backgroundColor: .black)
+        agrume.hideStatusBar = true
+        agrume.showFrom(self)
     }
     @IBAction func shareDidTap(_ sender: Any) {
         let vc = UIActivityViewController(activityItems: [image], applicationActivities: [])

@@ -19,7 +19,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var followerButton: UIButton!
     @IBOutlet weak var followedButton: UIButton!
-    @IBOutlet weak var blurView: UIView!
     @IBOutlet weak var bgImage: UIImageView!
     
     //MARK:- Variables
@@ -28,6 +27,7 @@ class ProfileViewController: UIViewController {
     //MARK:- Override
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         configurationUI()
     }
     override func didReceiveMemoryWarning() {
@@ -42,6 +42,13 @@ class ProfileViewController: UIViewController {
     }
 
     //MARK:- Setup
+    private func setup() {
+        guard let myUser = User.getMyProfile() else {
+            print("Profile not found")
+            return
+        }
+        setBackgroundImage(user: myUser)
+    }
     private func configurationUI() {
         guard let myUser = User.getMyProfile() else {
             print("Profile not found")
@@ -49,25 +56,28 @@ class ProfileViewController: UIViewController {
         }
         usernameLabel.text = myUser.username
         descriptionLabel.text = myUser.bio
-//        webSiteButton.setTitle(myUser.website, for: .normal)
+        webSiteButton.setTitle(myUser.website, for: .normal)
         profileImageView.isCircle()
         profileImageView.kf.setImage(with: URL(string: myUser.profilePicture), placeholder: #imageLiteral(resourceName: "ic_account"))
         postButton.setTitle(String(myUser.media), for: .normal)
         followerButton.setTitle(String(myUser.followedBy), for: .normal)
         followedButton.setTitle(String(myUser.follows), for: .normal)
     
-        timer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(setBackgroundImage(timer:)), userInfo: myUser, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(callTimer(timer:)), userInfo: myUser, repeats: true)
     }
     //MARK:- Helpers
-    @objc private func setBackgroundImage(timer: Timer) {
+    @objc private func callTimer(timer: Timer) {
         guard let userInfo = timer.userInfo as? User else {
             return
         }
-        let images = Image.getAllImages(withUserID: userInfo.userID)
+        setBackgroundImage(user: userInfo)
+    }
+    private func setBackgroundImage(user: User) {
+        let images = Image.getAllImages(withUserID: user.userID)
         let number = arc4random_uniform(UInt32(images.count))
         bgImage.kf.setImage(with: URL(string: images[Int(number)].standardResolution))
     }
-    
+
     //MARK:- Actions
     @IBAction func webSiteDidTap(_ sender: Any) {
         Utility.link(url: webSiteButton.titleLabel?.text)

@@ -38,7 +38,6 @@
 		2A53547E1FAA89B800856690 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53547D1FAA89B800856690 /* CustomButtonView.swift */; };
 		2A681C6F1FA8F84000A9D40E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A681C6E1FA8F84000A9D40E /* Image.swift */; };
 		2A681C711FA8F97D00A9D40E /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A681C701FA8F97D00A9D40E /* Enum.swift */; };
-		2A6FE57A1FAB9A3900BCF9D6 /* CustomCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FE5791FAB9A3900BCF9D6 /* CustomCard.swift */; };
 		2A7DD6211FADCD020085054F /* API+Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DD6201FADCD020085054F /* API+Comment.swift */; };
 		2A7DD6231FADCF0E0085054F /* AR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7DD6221FADCF0E0085054F /* AR.storyboard */; };
 		2A7DD6261FADCF470085054F /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DD6251FADCF470085054F /* ARViewController.swift */; };
@@ -50,7 +49,6 @@
 		2AF7793A1FA9D54700865CC9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF779391FA9D54700865CC9 /* NavigationController.swift */; };
 		2AF7796A1FAA154100865CC9 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF779691FAA154100865CC9 /* CardCollectionCell.swift */; };
 		2AF7796C1FAA306600865CC9 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7796B1FAA306600865CC9 /* ImageDetailsViewController.swift */; };
-		2AF779701FAA3F0200865CC9 /* APITestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF7796F1FAA3F0200865CC9 /* APITestViewController.swift */; };
 		C7CC6A42276AE269FC703925 /* Pods_My_Simple_InstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E29A78902A1FE91E062F5B1 /* Pods_My_Simple_InstagramTests.framework */; };
 		C8AEE0B29752FEB3902C84AA /* Pods_My_Simple_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441CC03A8726E5EF1D4329F7 /* Pods_My_Simple_Instagram.framework */; };
 /* End PBXBuildFile section */
@@ -103,7 +101,6 @@
 		2A53547D1FAA89B800856690 /* CustomButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		2A681C6E1FA8F84000A9D40E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2A681C701FA8F97D00A9D40E /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
-		2A6FE5791FAB9A3900BCF9D6 /* CustomCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCard.swift; sourceTree = "<group>"; };
 		2A7DD6201FADCD020085054F /* API+Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Comment.swift"; sourceTree = "<group>"; };
 		2A7DD6221FADCF0E0085054F /* AR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AR.storyboard; sourceTree = "<group>"; };
 		2A7DD6251FADCF470085054F /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +112,6 @@
 		2AF779391FA9D54700865CC9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		2AF779691FAA154100865CC9 /* CardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
 		2AF7796B1FAA306600865CC9 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
-		2AF7796F1FAA3F0200865CC9 /* APITestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestViewController.swift; sourceTree = "<group>"; };
 		38E86609F38C843957961821 /* Pods-My-Simple-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My-Simple-Instagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-My-Simple-Instagram/Pods-My-Simple-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		441CC03A8726E5EF1D4329F7 /* Pods_My_Simple_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Simple_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C8F76062ACB33779133FA9B /* Pods-My-Simple-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My-Simple-InstagramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My-Simple-InstagramTests/Pods-My-Simple-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -317,7 +313,6 @@
 		2A1758E31FA7A2980062F7CD /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				2AF7796F1FAA3F0200865CC9 /* APITestViewController.swift */,
 				2A1758E41FA7A2EE0062F7CD /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -328,7 +323,6 @@
 			children = (
 				2A1758E61FA7A3380062F7CD /* LAButton.swift */,
 				2A1758E91FA7A4DE0062F7CD /* LABarButton.swift */,
-				2A6FE5791FAB9A3900BCF9D6 /* CustomCard.swift */,
 			);
 			path = "Custom componets";
 			sourceTree = "<group>";
@@ -643,7 +637,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A6FE57A1FAB9A3900BCF9D6 /* CustomCard.swift in Sources */,
 				2A7DD6211FADCD020085054F /* API+Comment.swift in Sources */,
 				2AF7796C1FAA306600865CC9 /* ImageDetailsViewController.swift in Sources */,
 				2AC5D7871FAA4CBC00F057BE /* GalleryViewController.swift in Sources */,
@@ -665,7 +658,6 @@
 				2A7DD6281FADD5360085054F /* CommentCell.swift in Sources */,
 				2A5354761FAA81F600856690 /* UIImageView+XT.swift in Sources */,
 				2A1758F01FA7A73D0062F7CD /* ResponseParser+Users.swift in Sources */,
-				2AF779701FAA3F0200865CC9 /* APITestViewController.swift in Sources */,
 				2A1758C91FA79C290062F7CD /* APIEndpoint+Core.swift in Sources */,
 				2A7DD62D1FADD87B0085054F /* ReponserParser+Comments.swift in Sources */,
 				2A7DD62B1FADD77F0085054F /* Comment.swift in Sources */,

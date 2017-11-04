@@ -34,7 +34,7 @@ class CardCollectionCell: UICollectionViewCell {
         if let img = imageString, let imageUrl = URL(string: img) {
             imageView.kf.setImage(with: imageUrl, placeholder: nil, completionHandler: { (image, error, cache, url) in
                 if error == nil {
-                    let card = CustomCard(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height))
+                    let card = CardArticle(frame: CGRect(x: 0, y: 0, width: self.view.frame.width , height: self.view.frame.height))
                     card.delegate = controller as? CardDelegate
                     card.backgroundImage = image
                     card.cardRadius = 10

@@ -10,63 +10,64 @@ import UIKit
 import SceneKit
 import ARKit
 
+/*
+    Una volta identificato un piano sarà possibile posizionare toccando lo schermo un cubo che avrà come facce l'immagine scelta.
+ */
 @available(iOS 11.0, *)
 class ARViewController: UIViewController {
 
     //MARK:- Properties
     var sceneView: ARSCNView!
     var image: UIImage!
-
-//    var planes = [OverlayPlane]()
     
     //MARK:- Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Dynamically set ARSCNView
-        self.sceneView = ARSCNView(frame: self.view.frame)
-        self.view.addSubview(self.sceneView)
-        
-        //MARK:- Debug session
-        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
-        
-        // Set the view's delegate
-//        sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene()
-        
-        // Set the scene to the view
-        sceneView.scene = scene
-        
+        setup()
+        configurationUI()
         registerTapGestureRecognizers()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-        
-        //Show orizontal planes that app find around you
         configuration.planeDetection = .horizontal
-        // Run the view's session
+
         sceneView.session.run(configuration)
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        // Pause the view's session
         sceneView.session.pause()
     }
 
+    //MARK:- Setup
+    private func setup() {
+        
+        self.sceneView = ARSCNView(frame: self.view.frame)
+        self.view.addSubview(self.sceneView)
+        
+        self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints, ARSCNDebugOptions.showWorldOrigin]
+        sceneView.delegate = self
+        sceneView.showsStatistics = true
+        
+        let scene = SCNScene()
+        sceneView.scene = scene
+    }
+    private func configurationUI() {
+        let button = UIButton(frame: CGRect(x: 10, y: 40, width: 60, height: 60))
+        button.setBackgroundImage(#imageLiteral(resourceName: "ic_x_rounded"), for: .normal)
+        button.addTarget(self, action: #selector(closeDidTap), for: .touchUpInside)
+        
+        self.view.addSubview(button)
+    }
     //MARK:- Helpers
+    @objc func closeDidTap(sender: UIButton!) {
+        self.dismiss(animated: true, completion: nil)
+    }
     private func registerTapGestureRecognizers() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapped))
         self.sceneView.addGestureRecognizer(tapGestureRecognizer)
@@ -97,5 +98,16 @@ class ARViewController: UIViewController {
         cube.position = SCNVector3(hitResult.worldTransform.columns.3.x, hitResult.worldTransform.columns.3.y + Float(boxGeometry.height/2), hitResult.worldTransform.columns.3.z)
         
         self.sceneView.scene.rootNode.addChildNode(cube)
+    }
+}
+
+//MARK:- ARKit delegate
+@available(iOS 11.0, *)
+extension ARViewController: ARSCNViewDelegate {
+    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        print("DidAdd")
+    }
+    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
+        print("DidUpdate")
     }
 }
