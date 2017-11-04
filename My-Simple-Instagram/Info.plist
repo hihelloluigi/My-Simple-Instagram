@@ -41,5 +41,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Permetti di salvare le foto nella tua galleria</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Permetti di utilizzare la camera per vedere le tue foto in realtà aumentata</string>
 </dict>
 </plist>

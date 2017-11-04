@@ -10,14 +10,15 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //MARK:- Outlets
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
     
+    //MARK:- Override
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

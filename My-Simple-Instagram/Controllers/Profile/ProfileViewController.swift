@@ -19,9 +19,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var postButton: UIButton!
     @IBOutlet weak var followerButton: UIButton!
     @IBOutlet weak var followedButton: UIButton!
+    @IBOutlet weak var blurView: UIView!
+    @IBOutlet weak var bgImage: UIImageView!
     
     //MARK:- Variables
-
+    var timer: Timer = Timer()
+    
     //MARK:- Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +36,10 @@ class ProfileViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer.invalidate()
+    }
 
     //MARK:- Setup
     private func configurationUI() {
@@ -42,15 +49,23 @@ class ProfileViewController: UIViewController {
         }
         usernameLabel.text = myUser.username
         descriptionLabel.text = myUser.bio
-        webSiteButton.setTitle(myUser.website, for: .normal)
+//        webSiteButton.setTitle(myUser.website, for: .normal)
         profileImageView.isCircle()
         profileImageView.kf.setImage(with: URL(string: myUser.profilePicture), placeholder: #imageLiteral(resourceName: "ic_account"))
-        
-
-//        customView.set(number: String(myUser.media), description: "post")
-//        postButton.addSubview(customView)
-//        followerButton.addSubview(CustomButtonView(frame: followerButton.frame))
-//        followedButton.addSubview(CustomButtonView(frame: followedButton.frame, number: String(myUser.followedBy), description: "seguiti"))
+        postButton.setTitle(String(myUser.media), for: .normal)
+        followerButton.setTitle(String(myUser.followedBy), for: .normal)
+        followedButton.setTitle(String(myUser.follows), for: .normal)
+    
+        timer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(setBackgroundImage(timer:)), userInfo: myUser, repeats: true)
+    }
+    //MARK:- Helpers
+    @objc private func setBackgroundImage(timer: Timer) {
+        guard let userInfo = timer.userInfo as? User else {
+            return
+        }
+        let images = Image.getAllImages(withUserID: userInfo.userID)
+        let number = arc4random_uniform(UInt32(images.count))
+        bgImage.kf.setImage(with: URL(string: images[Int(number)].standardResolution))
     }
     
     //MARK:- Actions
