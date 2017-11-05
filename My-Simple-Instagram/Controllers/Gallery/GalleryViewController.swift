@@ -19,7 +19,8 @@ class GalleryViewController: UIViewController {
     //MARK:- Variables
     var images = [Image]()
     var card: CardHighlight!
-    
+    var refresher: UIRefreshControl!
+
     //MARK:- Override
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,6 @@ class GalleryViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        collectionView.reloadData()
     }
     
     //MARK:- Setup
@@ -45,11 +45,22 @@ class GalleryViewController: UIViewController {
         }
     }
     private func setupCollectionView() {
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        self.collectionView.delegate = self
+        self.collectionView.dataSource = self
+        
+        self.refresher = UIRefreshControl()
+        self.collectionView.alwaysBounceVertical = true
+        self.refresher.addTarget(self, action: #selector(RefreshDidTap(_:)), for: .valueChanged)
+        
+        if #available(iOS 10.0, *) {
+            setRefresherWith(text: "Common" ~> "pull to refresh", andColor: .white)
+            self.collectionView.refreshControl = refresher
+        } else {
+            setRefresherWith(text: "Common" ~> "pull to refresh", andColor: .black)
+            self.collectionView.addSubview(refresher)
+        }
     }
     private func myProfileButton() {
-        //TO DO - Add profile button like apple store
         let profileButton: LAButton = LAButton(type: .custom)
         profileButton.frame = CGRect(x: 0, y: 100, width: 34, height: 34)
         profileButton.isCircle = true
@@ -71,6 +82,10 @@ class GalleryViewController: UIViewController {
             }
         }
     }
+    private func setRefresherWith(text: String = "", andColor c: UIColor) {
+        self.refresher.tintColor = c
+        self.refresher.attributedTitle = NSAttributedString(string: text, attributes: [NSAttributedStringKey.foregroundColor : c])
+    }
     
     //MARK:- Helpers
     @objc private func openMyProfile() {
@@ -90,9 +105,10 @@ class GalleryViewController: UIViewController {
             self.myProfileButton()
         }
     }
-    private func downloadRecentMedia(maxId: String = "", minId: String = "", count: String = "") {
+    @objc func downloadRecentMedia(_ maxId: String = "", _ minId: String = "", _ count: String = "") {
         //ADD activity indicator
         API.UserClass.getMyMedia(maxId: maxId, minId: minId, count: count) { (success) in
+            self.refresher.endRefreshing()
             guard let id = Config.id(), success else {
                 print("Errore")
                 return
@@ -105,10 +121,8 @@ class GalleryViewController: UIViewController {
     //MARK:- Actions
     @IBAction func RefreshDidTap(_ sender: Any) {
         downloadRecentMedia()
-        if self.images.count > 0 {
-            self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0),
-                                              at: .top,
-                                              animated: true)
+        if let _ = sender as? UIBarButtonItem, self.images.count > 0 {
+            self.collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }
     }
 }
@@ -143,8 +157,6 @@ extension GalleryViewController: CardDelegate {
         
         card.shouldPresent(cardContentVC, from: self)
     }
-    
     func cardHighlightDidTapButton(card: CardHighlight, button: UIButton) {
-        card.buttonText = "HEY!"
     }
 }

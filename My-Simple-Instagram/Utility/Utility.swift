@@ -33,5 +33,11 @@ class Utility {
             }
         }
     }
+    
+    static func basicAlert(title: String, message: String, style: UIAlertControllerStyle = .alert, buttoTitle bt: String, viewControlle vc: UIViewController) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        alert.addAction(UIAlertAction(title: bt, style: .default, handler: nil))
+        alert.present(vc, animated: true, completion: nil)
+    }
 }
 

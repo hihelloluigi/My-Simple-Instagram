@@ -95,11 +95,7 @@ class ImageDetailsViewController: UIViewController {
             controller.image = image
             self.present(controller, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Versione non supportata", message: "La tua versione di iOS non supporta la realtà aumentata, se vuoi utilizzare questa funziona aggiorna il tuo sistema operativo", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            
-            alert.present(self, animated: true, completion: nil)
+            Utility.basicAlert(title: "Common" ~> "unsupported version", message: "ImageDetails" ~> "ar not supported", buttoTitle: "Common" ~> "ok", viewControlle: self)
         }
     }
 }
