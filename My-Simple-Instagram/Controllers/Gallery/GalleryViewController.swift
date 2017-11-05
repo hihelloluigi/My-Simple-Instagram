@@ -44,6 +44,14 @@ class GalleryViewController: UIViewController {
             UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         }
     }
+    private func setupImages() {
+        guard let id = Config.id() else {
+            print("Errore")
+            return
+        }
+        self.images = Image.getAllImages(withUserID: id)
+        self.collectionView.reloadData()
+    }
     private func setupCollectionView() {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -109,12 +117,11 @@ class GalleryViewController: UIViewController {
         //ADD activity indicator
         API.UserClass.getMyMedia(maxId: maxId, minId: minId, count: count) { (success) in
             self.refresher.endRefreshing()
-            guard let id = Config.id(), success else {
+            guard success else {
                 print("Errore")
                 return
             }
-            self.images = Image.getAllImages(withUserID: id)
-            self.collectionView.reloadData()
+            self.setupImages()
         }
     }
     
