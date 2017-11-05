@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "1,2K"; ObjectID = "7xg-jL-jPa"; */
+"7xg-jL-jPa.normalTitle" = "1,2K";
+
+/* Class = "UILabel"; text = "Bio"; ObjectID = "Db8-d4-tnh"; */
+"Db8-d4-tnh.text" = "Bio";
+
+/* Class = "UIButton"; normalTitle = "1,2K"; ObjectID = "Dp6-de-wbC"; */
+"Dp6-de-wbC.normalTitle" = "1,2K";
+
+/* Class = "UILabel"; text = "Seguiti"; ObjectID = "KcW-a5-4Ja"; */
+"KcW-a5-4Ja.text" = "Seguiti";
+
+/* Class = "UIButton"; normalTitle = "1,2K"; ObjectID = "b3z-83-WPK"; */
+"b3z-83-WPK.normalTitle" = "1,2K";
+
+/* Class = "UINavigationItem"; title = "Profilo"; ObjectID = "bLL-LZ-03d"; */
+"bLL-LZ-03d.title" = "Profilo";
+
+/* Class = "UILabel"; text = "Post"; ObjectID = "dN8-iq-jYF"; */
+"dN8-iq-jYF.text" = "Post";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hyF-qJ-fbX"; */
+"hyF-qJ-fbX.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "qOy-mf-SWr"; */
+"qOy-mf-SWr.text" = "Username";
+
+/* Class = "UILabel"; text = "Follower"; ObjectID = "wAo-uM-b2B"; */
+"wAo-uM-b2B.text" = "Follower";

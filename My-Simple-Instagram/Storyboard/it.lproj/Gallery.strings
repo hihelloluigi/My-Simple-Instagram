@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Nome"; ObjectID = "Fdv-Hq-iPl"; */
+"Fdv-Hq-iPl.text" = "Nome";
+
+/* Class = "UILabel"; text = "Comments"; ObjectID = "Khn-Y8-GNn"; */
+"Khn-Y8-GNn.text" = "Commenti";
+
+/* Class = "UILabel"; text = "Commento"; ObjectID = "VS1-2F-ZD8"; */
+"VS1-2F-ZD8.text" = "Commento";
+
+/* Class = "UINavigationItem"; title = "Gallery"; ObjectID = "cah-ZP-NtM"; */
+"cah-ZP-NtM.title" = "Galleria";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "dkx-oh-rMF"; */
+"dkx-oh-rMF.text" = "Posizione";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "fcJ-y7-SiU"; */
+"fcJ-y7-SiU.normalTitle" = "Pulsante";
+
+/* Class = "UILabel"; text = "Likes"; ObjectID = "tmi-TM-3pM"; */
+"tmi-TM-3pM.text" = "Mi piace";
