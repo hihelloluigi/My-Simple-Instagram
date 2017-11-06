@@ -13,11 +13,29 @@ class AppConfig {
     // MARK: - Singleton instance
     static let sharedInstance = AppConfig()
     
-    static let INSTAGRAM_AUTHURL = "https://api.instagram.com/oauth/authorize/"
-    static let INSTAGRAM_CLIENT_ID = "2662b83c8a6d4b1a910c677cc638bc2d"
-    static let INSTAGRAM_CLIENTSERCRET = "dab1cc77151446858ffad168ebd2981b"
-    static let INSTAGRAM_REDIRECT_URI = "http://www.luigiaiello.org"
-    static let INSTAGRAM_ACCESS_TOKEN = "access_token"
-    static let INSTAGRAM_SCOPE = "follower_list+public_content" /* add whatever scope you need https://www.instagram.com/developer/authorization/ */
+    //Keys
+    static let kAUTHURL: String = "INSTAGRAM_AUTHURL"
+    static let kCLIENTID = "INSTAGRAM_CLIENT_ID"
+    static let kCLIENTSERCRET = "INSTAGRAM_CLIENTSERCRET"
+    static let kREDIRECT = "INSTAGRAM_REDIRECT_URI"
+    static let kACCESSTOKEN = "INSTAGRAM_ACCESS_TOKEN"
+    static let kSCOPE = "INSTAGRAM_SCOPE"
+
+    class var dict: NSDictionary {
+        get {
+            guard let p = Bundle.main.path(forResource: "InstaConfig", ofType: "plist"),
+                let d = NSDictionary(contentsOfFile: p) else {
+                return [:]
+            }
+            return d
+        }
+    }
+    
+    static let INSTAGRAM_AUTHURL = dict[kAUTHURL] as! String
+    static let INSTAGRAM_CLIENT_ID = dict[kCLIENTID] as! String
+    static let INSTAGRAM_CLIENTSERCRET = dict[kCLIENTSERCRET] as! String
+    static let INSTAGRAM_REDIRECT_URI = dict[kREDIRECT] as! String
+    static let INSTAGRAM_ACCESS_TOKEN = dict[kACCESSTOKEN] as! String
+    static let INSTAGRAM_SCOPE = dict[kSCOPE] as! String/* add whatever scope you need https://www.instagram.com/developer/authorization/ */
 }
 
