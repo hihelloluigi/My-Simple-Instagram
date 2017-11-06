@@ -13,7 +13,8 @@ target 'My-Simple-Instagram' do
 
   #Networking
   pod 'Moya'
-
+  pod 'ReachabilitySwift'
+  
   #Images
   pod 'Kingfisher'
 
@@ -23,6 +24,7 @@ target 'My-Simple-Instagram' do
   #Graphics
   pod 'Cards'
   pod 'Agrume'
+  pod 'SwiftMessages'
   
   target 'My-Simple-InstagramTests' do
     inherit! :search_paths

@@ -10,12 +10,14 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
   - Player (0.8.4)
+  - ReachabilitySwift (4.1.0)
   - Realm (3.0.1):
     - Realm/Headers (= 3.0.1)
   - Realm/Headers (3.0.1)
   - RealmSwift (3.0.1):
     - Realm (= 3.0.1)
   - Result (3.2.4)
+  - SwiftMessages (4.0.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -23,7 +25,9 @@ DEPENDENCIES:
   - Cards
   - Kingfisher
   - Moya
+  - ReachabilitySwift
   - RealmSwift
+  - SwiftMessages
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -33,11 +37,13 @@ SPEC CHECKSUMS:
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   Moya: adb58b0f4e58430db43cc6e2f6ebab1836501186
   Player: e45514e9e5fb8ff18f50eb2ba6f84dac9b6a0024
+  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   Realm: ba6144c74f835f7497791f6599d63a7755377b83
   RealmSwift: 7d13b1ac4b6022a13f841e3143e7789c9e40ad0d
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
+  SwiftMessages: cd565e0e7d095584be1770c012c6b5be4183b5ee
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 8cdf2a3463f04dd2d0db1a1b450ba8ab32ac5fe1
+PODFILE CHECKSUM: ddd65d87626271cb5de8c3abd863414fc34c5401
 
 COCOAPODS: 1.3.1
