@@ -17,10 +17,22 @@ class LoginViewController: UIViewController {
     //MARK:- Override
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if (ReachabilityManager.shared.reachability.connection != .none) {
+            setup()
+        } else {
+            let mainStoryboard = UIStoryboard(name: "Login", bundle: Bundle.main)
+            let controller: NoInternetViewController = mainStoryboard.instantiateViewController(withIdentifier: "NoInternetViewController") as! NoInternetViewController
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     
     // MARK:- Setup
@@ -31,8 +43,7 @@ class LoginViewController: UIViewController {
         webView.loadRequest(urlRequest)
     }
     
-    // MARK:- Helpers
-    func checkRequestForCallbackURL(request: URLRequest) -> Bool {
+    private func checkRequestForCallbackURL(request: URLRequest) -> Bool {
         let requestURLString = (request.url?.absoluteString)! as String
         //APILOL.INSTAGRAM_REDIRECT_URI
         if requestURLString.hasPrefix(AppConfig.INSTAGRAM_REDIRECT_URI) {
@@ -43,7 +54,7 @@ class LoginViewController: UIViewController {
         }
         return true
     }
-    func handleAuth(authToken: String) {
+    private func handleAuth(authToken: String) {
         print("Token: \(authToken)")
         Config.store(token: authToken)
         
@@ -75,3 +86,5 @@ extension LoginViewController: UIWebViewDelegate {
         webViewDidFinishLoad(webView)
     }
 }
+
+

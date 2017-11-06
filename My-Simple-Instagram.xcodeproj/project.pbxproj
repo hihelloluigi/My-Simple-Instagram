@@ -20,7 +20,7 @@
 		2A1758CD1FA79C6E0062F7CD /* APIEndpoint+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758CC1FA79C6E0062F7CD /* APIEndpoint+Paths.swift */; };
 		2A1758CF1FA79C9A0062F7CD /* APIEndpoint+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758CE1FA79C9A0062F7CD /* APIEndpoint+Methods.swift */; };
 		2A1758D11FA79CE50062F7CD /* APIEndpoint+Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758D01FA79CE50062F7CD /* APIEndpoint+Tasks.swift */; };
-		2A1758D31FA79D350062F7CD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758D21FA79D350062F7CD /* Reachability.swift */; };
+		2A1758D31FA79D350062F7CD /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758D21FA79D350062F7CD /* ReachabilityManager.swift */; };
 		2A1758DA1FA79E6B0062F7CD /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758D91FA79E6B0062F7CD /* Database.swift */; };
 		2A1758DC1FA79ED20062F7CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758DB1FA79ED20062F7CD /* LoginViewController.swift */; };
 		2A1758DF1FA7A02C0062F7CD /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758DE1FA7A02C0062F7CD /* AppConfig.swift */; };
@@ -31,6 +31,7 @@
 		2A1758EE1FA7A7200062F7CD /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758ED1FA7A7200062F7CD /* ResponseParser.swift */; };
 		2A1758F01FA7A73D0062F7CD /* ResponseParser+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758EF1FA7A73D0062F7CD /* ResponseParser+Users.swift */; };
 		2A1758F21FA7AD300062F7CD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1758F11FA7AD300062F7CD /* Config.swift */; };
+		2A26A3751FB09A55007ADEF6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A26A3741FB09A55007ADEF6 /* Message.swift */; };
 		2A5354721FAA7CE800856690 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5354711FAA7CE800856690 /* Utility.swift */; };
 		2A5354761FAA81F600856690 /* UIImageView+XT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5354751FAA81F600856690 /* UIImageView+XT.swift */; };
 		2A53547E1FAA89B800856690 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A53547D1FAA89B800856690 /* CustomButtonView.swift */; };
@@ -50,6 +51,8 @@
 		2A7DD64F1FAF2B6E0085054F /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7DD6511FAF2B6E0085054F /* Gallery.storyboard */; };
 		2A7DD6561FAF2C020085054F /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A7DD6581FAF2C020085054F /* Profile.storyboard */; };
 		2A7DD6611FAF2CE20085054F /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2A7DD6631FAF2CE20085054F /* Common.strings */; };
+		2AB7E9881FB0C70F00A5C18F /* NoInternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB7E9871FB0C70F00A5C18F /* NoInternetViewController.swift */; };
+		2AB7E98A1FB0D11F00A5C18F /* InstaConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AB7E9891FB0D11F00A5C18F /* InstaConfig.plist */; };
 		2AC5D7871FAA4CBC00F057BE /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5D7861FAA4CBC00F057BE /* GalleryViewController.swift */; };
 		2AF7793A1FA9D54700865CC9 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF779391FA9D54700865CC9 /* NavigationController.swift */; };
 		2AF7796A1FAA154100865CC9 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF779691FAA154100865CC9 /* CardCollectionCell.swift */; };
@@ -88,7 +91,7 @@
 		2A1758CC1FA79C6E0062F7CD /* APIEndpoint+Paths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoint+Paths.swift"; sourceTree = "<group>"; };
 		2A1758CE1FA79C9A0062F7CD /* APIEndpoint+Methods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoint+Methods.swift"; sourceTree = "<group>"; };
 		2A1758D01FA79CE50062F7CD /* APIEndpoint+Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIEndpoint+Tasks.swift"; sourceTree = "<group>"; };
-		2A1758D21FA79D350062F7CD /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		2A1758D21FA79D350062F7CD /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		2A1758D91FA79E6B0062F7CD /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		2A1758DB1FA79ED20062F7CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A1758DE1FA7A02C0062F7CD /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -99,6 +102,7 @@
 		2A1758ED1FA7A7200062F7CD /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		2A1758EF1FA7A73D0062F7CD /* ResponseParser+Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseParser+Users.swift"; sourceTree = "<group>"; };
 		2A1758F11FA7AD300062F7CD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		2A26A3741FB09A55007ADEF6 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		2A5354711FAA7CE800856690 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		2A5354751FAA81F600856690 /* UIImageView+XT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+XT.swift"; sourceTree = "<group>"; };
 		2A53547D1FAA89B800856690 /* CustomButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 		2A7DD65C1FAF2C090085054F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Profile.strings; sourceTree = "<group>"; };
 		2A7DD6621FAF2CE20085054F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Common.strings; sourceTree = "<group>"; };
 		2A7DD6641FAF2CE30085054F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Common.strings; sourceTree = "<group>"; };
+		2AB7E9871FB0C70F00A5C18F /* NoInternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoInternetViewController.swift; sourceTree = "<group>"; };
+		2AB7E9891FB0D11F00A5C18F /* InstaConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InstaConfig.plist; sourceTree = "<group>"; };
 		2AC5D7861FAA4CBC00F057BE /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		2AF779391FA9D54700865CC9 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		2AF779691FAA154100865CC9 /* CardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
@@ -229,9 +235,10 @@
 			isa = PBXGroup;
 			children = (
 				2A5354711FAA7CE800856690 /* Utility.swift */,
+				2A26A3741FB09A55007ADEF6 /* Message.swift */,
 				2A1758C01FA79B920062F7CD /* Typealiases.swift */,
 				2A681C701FA8F97D00A9D40E /* Enum.swift */,
-				2A1758D21FA79D350062F7CD /* Reachability.swift */,
+				2A1758D21FA79D350062F7CD /* ReachabilityManager.swift */,
 				2AF779391FA9D54700865CC9 /* NavigationController.swift */,
 				2A53547D1FAA89B800856690 /* CustomButtonView.swift */,
 			);
@@ -286,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1758DB1FA79ED20062F7CD /* LoginViewController.swift */,
+				2AB7E9871FB0C70F00A5C18F /* NoInternetViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -317,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				2A1758DE1FA7A02C0062F7CD /* AppConfig.swift */,
+				2AB7E9891FB0D11F00A5C18F /* InstaConfig.plist */,
 				2A1758F11FA7AD300062F7CD /* Config.swift */,
 			);
 			path = Configurations;
@@ -536,6 +545,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AB7E98A1FB0D11F00A5C18F /* InstaConfig.plist in Resources */,
 				2A1758A91FA780FC0062F7CD /* LaunchScreen.storyboard in Resources */,
 				2A7DD6451FAF29D30085054F /* ImageDetails.strings in Resources */,
 				2A7DD6611FAF2CE20085054F /* Common.strings in Resources */,
@@ -654,9 +664,11 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -667,9 +679,11 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -701,10 +715,12 @@
 				2A1758D11FA79CE50062F7CD /* APIEndpoint+Tasks.swift in Sources */,
 				2A7DD64E1FAF2A2A0085054F /* String+XT.swift in Sources */,
 				2A1758E71FA7A3380062F7CD /* LAButton.swift in Sources */,
+				2AB7E9881FB0C70F00A5C18F /* NoInternetViewController.swift in Sources */,
 				2A681C6F1FA8F84000A9D40E /* Image.swift in Sources */,
 				2A1758EC1FA7A65A0062F7CD /* User.swift in Sources */,
 				2A7DD6281FADD5360085054F /* CommentCell.swift in Sources */,
 				2A5354761FAA81F600856690 /* UIImageView+XT.swift in Sources */,
+				2A26A3751FB09A55007ADEF6 /* Message.swift in Sources */,
 				2A1758F01FA7A73D0062F7CD /* ResponseParser+Users.swift in Sources */,
 				2A1758C91FA79C290062F7CD /* APIEndpoint+Core.swift in Sources */,
 				2A7DD62D1FADD87B0085054F /* ReponserParser+Comments.swift in Sources */,
@@ -712,7 +728,7 @@
 				2A1758DA1FA79E6B0062F7CD /* Database.swift in Sources */,
 				2A1758CF1FA79C9A0062F7CD /* APIEndpoint+Methods.swift in Sources */,
 				2A1758EA1FA7A4DE0062F7CD /* LABarButton.swift in Sources */,
-				2A1758D31FA79D350062F7CD /* Reachability.swift in Sources */,
+				2A1758D31FA79D350062F7CD /* ReachabilityManager.swift in Sources */,
 				2A17589F1FA780FC0062F7CD /* AppDelegate.swift in Sources */,
 				2A1758DF1FA7A02C0062F7CD /* AppConfig.swift in Sources */,
 				2A1758C31FA79BAF0062F7CD /* API.swift in Sources */,

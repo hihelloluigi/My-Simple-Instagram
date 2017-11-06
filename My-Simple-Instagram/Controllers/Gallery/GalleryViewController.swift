@@ -106,7 +106,7 @@ class GalleryViewController: UIViewController {
     private func downloadProfile() {
         API.UserClass.getMyProfile { (success) in
             guard success else {
-                print("Sorry I have no profile")
+                Message.show(error: "Gallery" ~> "downloadProfileError")
                 return
             }
             //Add my profile bar button
@@ -118,7 +118,7 @@ class GalleryViewController: UIViewController {
         API.UserClass.getMyMedia(maxId: maxId, minId: minId, count: count) { (success) in
             self.refresher.endRefreshing()
             guard success else {
-                print("Errore")
+                Message.show(error: "Gallery" ~> "downloadMediaError")
                 return
             }
             self.setupImages()
