@@ -19,7 +19,7 @@ extension APIEndpoint {
             return ("/users/\(userId)")
         case .getMyRecentMedia(_, _, _):
             return ("/users/self/media/recent")
-        case .getUserRecentMedia(let userId, _, _):
+        case .getUserRecentMedia(let userId, _, _, _):
             return ("/users/\(userId)/media/recent")
         case .getMyLike(_, _):
             return ("/users/self/media/liked")

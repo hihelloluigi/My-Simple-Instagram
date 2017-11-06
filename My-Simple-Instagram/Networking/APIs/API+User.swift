@@ -66,5 +66,22 @@ extension API {
                 }
             }
         }
+        
+        class func getUserMedia(userId: String, maxId: String, minId: String, count: String, _ completionHandler: SuccessHandler?) {
+            API.provider().request(.getUserRecentMedia(withId: userId, maxId: maxId, minId: minId, number: count)) { (result) in
+                switch result {
+                case let .success(response):
+                    let json = JSON(data: response.data)
+                    guard json["meta"]["code"] == 200 else {
+                        completionHandler?(false)
+                        return
+                    }
+                    let result = ResponseParser.Users.parseAndStoreGallery(json: json)
+                    completionHandler?(result)
+                case .failure(_):
+                    completionHandler?(false)
+                }
+            }
+        }
     }
 }

@@ -17,7 +17,7 @@ enum APIEndpoint {
     case getMyInfo()
     case getUserInfo(userId: String)
     case getMyRecentMedia(maxId: String, minId: String, number: String)
-    case getUserRecentMedia(maxId: String, minId: String, number: String)
+    case getUserRecentMedia(withId: String, maxId: String, minId: String, number: String)
     case getMyLike(maxId: String, number: String)
     case searchUser(query: String, number: String)
     

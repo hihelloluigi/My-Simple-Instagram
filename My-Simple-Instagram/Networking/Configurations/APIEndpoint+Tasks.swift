@@ -20,7 +20,7 @@ extension APIEndpoint {
             return .requestParameters(parameters: ["access_token": accessToken], encoding: parameterEncoding)
         case .getMyRecentMedia(let maxId, let minId, let number):
             return .requestParameters(parameters: ["max_id": maxId, "min_id": minId, "count": number, "access_token": accessToken,], encoding: parameterEncoding)
-        case .getUserRecentMedia(let maxId, let minId, let number):
+        case .getUserRecentMedia(_, let maxId, let minId, let number):
             return .requestParameters(parameters: ["max_id": maxId, "min_id": minId, "count": number, "access_token": accessToken], encoding: parameterEncoding)
         case .getMyLike(let maxId, let number):
             return .requestParameters(parameters: ["max_id": maxId, "count": number, "access_token": accessToken], encoding: parameterEncoding)

@@ -12,7 +12,7 @@ import Moya
 extension APIEndpoint {
     var method: Moya.Method {
         switch self {
-        case .getMyInfo(), .getUserInfo(_), .getMyRecentMedia(_, _, _), .getUserRecentMedia(_, _, _), .getMyLike(_, _), .searchUser(_, _),
+        case .getMyInfo(), .getUserInfo(_), .getMyRecentMedia(_, _, _), .getUserRecentMedia(_, _, _, _), .getMyLike(_, _), .searchUser(_, _),
              .getFollows(), .getFollowedBy(), .getRequestedBy(), .getRelationshipWith(_), .getMediaWithId(_), .getMediaWithShortCode(_), .getMediaWithArea(_, _, _), .getCommentsWith(_):
             return .get
         case .modifyRelationshipWith(_):
