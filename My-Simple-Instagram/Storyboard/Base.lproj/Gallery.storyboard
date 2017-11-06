@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AV6-pJ-XsY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -91,7 +91,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM6-s3-eNs" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="HER-sg-LvI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1431.2" y="1144.6776611694154"/>
+            <point key="canvasLocation" x="-1350" y="1145"/>
         </scene>
         <!--Image Details View Controller-->
         <scene sceneID="8S5-uw-7e7">
@@ -185,7 +185,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdv-Hq-iPl">
                                                     <rect key="frame" x="23" y="11" width="46" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.13023432413314406" blue="0.89145419018601035" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VS1-2F-ZD8">
@@ -237,33 +237,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0B-Of-LAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-703.20000000000005" y="1146.4767616191905"/>
+            <point key="canvasLocation" x="-788" y="1145"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="dCr-ya-MFq">
+        <scene sceneID="OJL-qJ-k4A">
             <objects>
-                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="AV6-pJ-XsY" customClass="NavigationController" customModule="My_Simple_Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gwI-mD-FkJ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fmV-0M-3Nt">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y4c-6D-tXc">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.0" green="0.086274509799999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="X0H-up-btO" kind="relationship" relationship="rootViewController" id="8gr-mJ-Zsm"/>
+                        <segue destination="X0H-up-btO" kind="relationship" relationship="rootViewController" id="zry-4Q-AXa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IkG-1s-1g3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0H-DM-Mun" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2126" y="1145"/>
+            <point key="canvasLocation" x="-1863" y="1145"/>
         </scene>
     </scenes>
     <resources>
