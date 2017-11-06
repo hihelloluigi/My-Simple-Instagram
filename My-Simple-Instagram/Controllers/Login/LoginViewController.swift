@@ -45,7 +45,6 @@ class LoginViewController: UIViewController {
     
     private func checkRequestForCallbackURL(request: URLRequest) -> Bool {
         let requestURLString = (request.url?.absoluteString)! as String
-        //APILOL.INSTAGRAM_REDIRECT_URI
         if requestURLString.hasPrefix(AppConfig.INSTAGRAM_REDIRECT_URI) {
             let range: Range<String.Index> = requestURLString.range(of: "#access_token=")!
             let newStr = String(requestURLString[range.upperBound...])

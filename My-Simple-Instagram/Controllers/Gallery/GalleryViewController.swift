@@ -26,6 +26,7 @@ class GalleryViewController: UIViewController {
         super.viewDidLoad()
         setup()
         setupCollectionView()
+        configurationUI()
         downloadProfile()
         downloadRecentMedia()
     }
@@ -51,6 +52,9 @@ class GalleryViewController: UIViewController {
         }
         self.images = Image.getAllImages(withUserID: id)
         self.collectionView.reloadData()
+    }
+    private func configurationUI() {
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     private func setupCollectionView() {
         self.collectionView.delegate = self
@@ -106,7 +110,7 @@ class GalleryViewController: UIViewController {
     private func downloadProfile() {
         API.UserClass.getMyProfile { (success) in
             guard success else {
-                Message.show(error: "Gallery" ~> "downloadProfileError")
+                Message.show(error: "Gallery" ~> "download profile error")
                 return
             }
             //Add my profile bar button
